@@ -6,11 +6,6 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -156,11 +151,6 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "recipient",
-						"type": "address"
-					},
-					{
 						"internalType": "uint256",
 						"name": "amount",
 						"type": "uint256"
@@ -169,19 +159,6 @@
 				"name": "mint",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "minter",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -321,11 +298,11 @@
 			]
 		},
 		"USDC.sol": {
-			"keccak256": "0xae97ac297c9ba13787cae5d81f6f52413ebb7ad6448027154f2d9facace2e703",
+			"keccak256": "0x3b1e1a450e0eb09fe367983baa0585fa642140b35fd5ef8fb44044b3061d525a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d942739da3ac8f137ce8efe97cd49a879d213c7bfbfdd012ce767563ec374840",
-				"dweb:/ipfs/QmZdCQx1Uw7b6wKWLSMBi44h82iRUGMeDMixb4T5pkwzLA"
+				"bzz-raw://725273ba5dda74f9398fb597a0c085d7b0c896d4d01bed0401603347e6d5baf4",
+				"dweb:/ipfs/QmZoHm22Dw5Nn7Yv3xcqaYCcYXSFDqFyvmghxZPkNT1b49"
 			]
 		}
 	},
