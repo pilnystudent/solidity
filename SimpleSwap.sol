@@ -29,14 +29,12 @@ contract SimpleSwap {
 
     function exchange(uint256 index) public returns (bool) {
         Offer storage offer = offers[index];
-        if (offer.active == true) {
-            offer.selling.transfer(msg.sender, offer.sellingAmount);
-            offer.buying.transferFrom(msg.sender, offer.owner, offer.buyingAmount);
-            offer.active = false;
-            emit Exchange(msg.sender, offer.owner, offer.selling, offer.sellingAmount, offer.buying, offer.buyingAmount);
-            return true;
-        }
-        return false;
+        require(offer.active == true, "offer is inactive");
+        offer.selling.transfer(msg.sender, offer.sellingAmount);
+        offer.buying.transferFrom(msg.sender, offer.owner, offer.buyingAmount);
+        offer.active = false;
+        emit Exchange(msg.sender, offer.owner, offer.selling, offer.sellingAmount, offer.buying, offer.buyingAmount);
+        return true;
     }
 
     event Add(address indexed owner, IERC20 selling, uint256 sellingAmount, IERC20 buying, uint256 buyingAmount);
