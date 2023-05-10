@@ -47,7 +47,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "ExchangeWith",
+				"name": "Exchange",
 				"outputs": [
 					{
 						"internalType": "bool",
@@ -92,6 +92,11 @@
 						"internalType": "uint256",
 						"name": "buyAmount",
 						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "active",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -142,11 +147,11 @@
 			]
 		},
 		"SimpleSwap.sol": {
-			"keccak256": "0x6c682124ee46ac3b6d1bd5b7ce8ce3cd2a4199964b9dfe5e215c540bb8c2c7da",
+			"keccak256": "0x501a3db599fc73446111a1bdd9999fc6a04b7a15f63eca64fefb8408d39d9d91",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1b63a9d48b1cf6789866b228799c00b352b1cdec8463fc6604b98bedeb295ef5",
-				"dweb:/ipfs/QmRXTtPgDMyuSrS4nP7Qct3eR9JNv7ThWFtGViEshJCDUP"
+				"bzz-raw://6bfa9c83404b7a4eaecb86cbb1694be1fd199aad54755c8cb815e00eec02fcbe",
+				"dweb:/ipfs/Qmdyo4oxe6Q5fAqGq6XyqX1xPwod3werxy3Lg3BDgo9bjT"
 			]
 		}
 	},

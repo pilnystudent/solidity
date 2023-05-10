@@ -10,6 +10,7 @@ contract SimpleSwap {
         uint256 sellAmount;
         IERC20 buy;
         uint256 buyAmount;
+        bool active;
     }
 
     Offer[] public offers;
@@ -21,14 +22,18 @@ contract SimpleSwap {
         uint256 buyAmount
     ) public returns (bool) {
         sell.transferFrom(msg.sender, address(this), sellAmount);
-        offers.push(Offer(msg.sender, sell, sellAmount, buy, buyAmount));
+        offers.push(Offer(msg.sender, sell, sellAmount, buy, buyAmount, true));
         return true;
     }
 
-    function ExchangeWith(uint256 index) public returns (bool) {
-        Offer memory offer = offers[index];
-        offer.sell.transfer(msg.sender, offer.sellAmount);
-        offer.buy.transferFrom(msg.sender, offer.seller, offer.buyAmount);
-        return true;
+    function Exchange(uint256 index) public returns (bool) {
+        Offer storage offer = offers[index];
+        if (offer.active == true) {
+            offer.sell.transfer(msg.sender, offer.sellAmount);
+            offer.buy.transferFrom(msg.sender, offer.seller, offer.buyAmount);
+            offer.active = false;
+            return true;
+        }
+        return false;
     }
 }
