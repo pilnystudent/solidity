@@ -33,8 +33,7 @@ contract SimpleSwap {
 
     function ExchangeWith(uint256 index) public returns (bool) {
         Offer memory offer = offers[index];
-        offer.sell.approve(msg.sender, offer.sellAmount);
-        offer.sell.transferFrom(address(this), msg.sender, offer.sellAmount);
+        offer.sell.transfer(msg.sender, offer.sellAmount);
         offer.buy.transferFrom(msg.sender, offer.seller, offer.buyAmount);
         return true;
     }
