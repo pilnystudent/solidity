@@ -111,7 +111,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"TokenSwap.sol": "TokenSwap"
+			"SimpleSwap.sol": "SimpleSwap"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -141,12 +141,12 @@
 				"dweb:/ipfs/QmYDYikanwzJ1qH4Ahkf67o51Nc4nEiFh1SwTYv7ipwp77"
 			]
 		},
-		"TokenSwap.sol": {
-			"keccak256": "0xd49dea7ed590c24f124e60e2db828ee60e05c37005f0416a7f966fcacb799f84",
+		"SimpleSwap.sol": {
+			"keccak256": "0x5e8d3f42abc531af58d030a3379b66400820a076901e7c40e9f77ff225a10986",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://91f82ef169a5e4012a409de6a8a9d37e349bad75d4158297f678b90d7b78de51",
-				"dweb:/ipfs/QmRNcgQEzgBDvjspnoSFS81VqF1u3x1fbcZPcuVHLxtBtS"
+				"bzz-raw://66b876fb755b52c6ff0cefa14f580cae38336b7e9dcba90a51ec6f8940274f7a",
+				"dweb:/ipfs/QmNy271NSTPTYAuBxk8QzmYhSnPYyTTgpvUuFujZ7rNoi3"
 			]
 		}
 	},
