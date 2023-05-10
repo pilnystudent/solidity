@@ -267,7 +267,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"USDC.sol": "MYUSD"
+			"USDC.sol": "USDC"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -282,11 +282,11 @@
 	},
 	"sources": {
 		"ERC20/ERC20.sol": {
-			"keccak256": "0x1a91db9e9232cd90598264967c47d3d96198a044bd54d565509d4875c8a240eb",
+			"keccak256": "0xb2442415ed415c347ee30027c7dab31d1c95a64bf4faceeaa8286814f980abfb",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f6f92fbeb0a2fffd129312ab10bda2ae9c0f79466f079f75ab36ec2b965fd2a9",
-				"dweb:/ipfs/QmdAgdDUTAtchecVJxYEgarnkvmQF3Kq4r4NU5FRTSsRhm"
+				"bzz-raw://3dac3287179247eb07ba890008fe09e9a44f6b654fd6c1233a5e0f601e43acd5",
+				"dweb:/ipfs/QmeUvVwzeCdY4TrWSrR1tFFtJkuYZNiNKb3NFhnE8nm44D"
 			]
 		},
 		"ERC20/IERC20.sol": {
@@ -298,11 +298,11 @@
 			]
 		},
 		"USDC.sol": {
-			"keccak256": "0x178032557ce96398a1bcca74b5322d50fad8e24f28316312a1966bed7127b780",
+			"keccak256": "0x3b1e1a450e0eb09fe367983baa0585fa642140b35fd5ef8fb44044b3061d525a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d61c809fba0359cdccf670ad6f41c10aa8814afc364d8f53537fcb6ae5e20b73",
-				"dweb:/ipfs/QmbYre4UsoF1z4nTV4QmfEme5KLR9GvWUmSxdTwmwnyq58"
+				"bzz-raw://725273ba5dda74f9398fb597a0c085d7b0c896d4d01bed0401603347e6d5baf4",
+				"dweb:/ipfs/QmZoHm22Dw5Nn7Yv3xcqaYCcYXSFDqFyvmghxZPkNT1b49"
 			]
 		}
 	},

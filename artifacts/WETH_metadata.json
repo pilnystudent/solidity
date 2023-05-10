@@ -149,16 +149,10 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
+				"inputs": [],
 				"name": "mint",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -267,7 +261,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"USDC.sol": "MYUSD"
+			"WETH.sol": "WETH"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -282,11 +276,11 @@
 	},
 	"sources": {
 		"ERC20/ERC20.sol": {
-			"keccak256": "0x1a91db9e9232cd90598264967c47d3d96198a044bd54d565509d4875c8a240eb",
+			"keccak256": "0xb2442415ed415c347ee30027c7dab31d1c95a64bf4faceeaa8286814f980abfb",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f6f92fbeb0a2fffd129312ab10bda2ae9c0f79466f079f75ab36ec2b965fd2a9",
-				"dweb:/ipfs/QmdAgdDUTAtchecVJxYEgarnkvmQF3Kq4r4NU5FRTSsRhm"
+				"bzz-raw://3dac3287179247eb07ba890008fe09e9a44f6b654fd6c1233a5e0f601e43acd5",
+				"dweb:/ipfs/QmeUvVwzeCdY4TrWSrR1tFFtJkuYZNiNKb3NFhnE8nm44D"
 			]
 		},
 		"ERC20/IERC20.sol": {
@@ -297,12 +291,12 @@
 				"dweb:/ipfs/QmcRRfiL93vuYkbfuNKz4K85vzXh4qpotmfhdwfyM4pNWc"
 			]
 		},
-		"USDC.sol": {
-			"keccak256": "0x178032557ce96398a1bcca74b5322d50fad8e24f28316312a1966bed7127b780",
+		"WETH.sol": {
+			"keccak256": "0xde9928dd5bc3e027d5b55ec06dee44c3d9c0e9927b295fafdff5e1cffee52242",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d61c809fba0359cdccf670ad6f41c10aa8814afc364d8f53537fcb6ae5e20b73",
-				"dweb:/ipfs/QmbYre4UsoF1z4nTV4QmfEme5KLR9GvWUmSxdTwmwnyq58"
+				"bzz-raw://0e21edab84fc081f43116c7e7e353fce38c8683852f3bcc7bb6d771bc5e6c829",
+				"dweb:/ipfs/Qmefw4NDxgjkFgoUPPAnNtWHDcptRwJR2BWeEesU5eQFT8"
 			]
 		}
 	},
