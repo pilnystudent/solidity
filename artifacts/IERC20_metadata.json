@@ -217,11 +217,11 @@
 	},
 	"sources": {
 		"IERC20.sol": {
-			"keccak256": "0x8935038436f8da8bcf6dccd6b5b794b3498274d1bfcb97124f423930d9a44988",
+			"keccak256": "0x8964e789a5c74096cb280d8703632f71d6ed94562611582781e90219c0b3355b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://09551423dec1c2414080a8cd1e74045147d1facd551295227fc5f01f843529d2",
-				"dweb:/ipfs/QmcmDcrGF8xhMtSfBx2pze3mYxSLZ7VNGPAbmAShpdnD4Z"
+				"bzz-raw://9e5f953c751862b6843eb92b6ec5089b909010ed73c6002fb53429ded525115f",
+				"dweb:/ipfs/QmawtLrBJHExgugEdock9Xxeny97AL3sKf8VLnMsjWpt15"
 			]
 		}
 	},
