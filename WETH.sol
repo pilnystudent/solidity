@@ -26,6 +26,9 @@ contract WETH is ERC20 {
 
     function burn(uint256 amount) external {
         balanceOf[msg.sender] -= amount;
+        unchecked {
+            totalSupply -= amount; // Cannot overflow
+        }
         payable(msg.sender).transfer(amount);
         emit Transfer(msg.sender, address(0), amount);
     }
