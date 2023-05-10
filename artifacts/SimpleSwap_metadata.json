@@ -6,6 +6,86 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "contract IERC20",
+						"name": "sell",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "sellAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "contract IERC20",
+						"name": "buy",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "buyAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "Add",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "contract IERC20",
+						"name": "sell",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "sellAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "contract IERC20",
+						"name": "buy",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "buyAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "Exchange",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "contract IERC20",
@@ -28,7 +108,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "Add",
+				"name": "add",
 				"outputs": [
 					{
 						"internalType": "bool",
@@ -47,7 +127,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "Exchange",
+				"name": "exchange",
 				"outputs": [
 					{
 						"internalType": "bool",
@@ -147,11 +227,11 @@
 			]
 		},
 		"SimpleSwap.sol": {
-			"keccak256": "0x501a3db599fc73446111a1bdd9999fc6a04b7a15f63eca64fefb8408d39d9d91",
+			"keccak256": "0x00ae0750a7e284b4f8f3ac9eacaf9af37d90a5e972918a423ad20aab0319aadd",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6bfa9c83404b7a4eaecb86cbb1694be1fd199aad54755c8cb815e00eec02fcbe",
-				"dweb:/ipfs/Qmdyo4oxe6Q5fAqGq6XyqX1xPwod3werxy3Lg3BDgo9bjT"
+				"bzz-raw://26512c99c2276d752887c93b30b401170af42da81d86f2345e1d10f747eefc49",
+				"dweb:/ipfs/QmQQVDXTmSgbQAHDjo3E4iNsirxt4abCXb8UmTrmC2gej4"
 			]
 		}
 	},
