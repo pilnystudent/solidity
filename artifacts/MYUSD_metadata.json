@@ -298,11 +298,11 @@
 			]
 		},
 		"MYUSD.sol": {
-			"keccak256": "0xf5c41c52e9e68cef637fb282617ece50adfb9c2f16f0c90eb26178372fe5cdc1",
+			"keccak256": "0x6b3c6dd7faef92c642dcd86cb209297e31a6ced4fc0fc311c52d1fd5187045dc",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8d43f2eedc051fa17c1564bfba48c59d3a593429166720cb8556edd9c8f6f3d7",
-				"dweb:/ipfs/QmTSGE8jUPvYoHHv2fYET4oDAmNbKUAEWRuxvQ3WRJjXYu"
+				"bzz-raw://b803c200c010c301bb9447e6bf44a068b1f4431a7d8658007d8b9ed928e81d83",
+				"dweb:/ipfs/QmdS8KEdnYuFGzdEj5wL8XXdgwCPLSqMpHPHZztk21vMhh"
 			]
 		}
 	},
