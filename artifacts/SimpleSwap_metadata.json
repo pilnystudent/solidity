@@ -11,31 +11,31 @@
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "sender",
+						"name": "owner",
 						"type": "address"
 					},
 					{
 						"indexed": false,
 						"internalType": "contract IERC20",
-						"name": "sell",
+						"name": "selling",
 						"type": "address"
 					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "sellAmount",
+						"name": "sellingAmount",
 						"type": "uint256"
 					},
 					{
 						"indexed": false,
 						"internalType": "contract IERC20",
-						"name": "buy",
+						"name": "buying",
 						"type": "address"
 					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "buyAmount",
+						"name": "buyingAmount",
 						"type": "uint256"
 					}
 				],
@@ -54,31 +54,31 @@
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "recipient",
+						"name": "owner",
 						"type": "address"
 					},
 					{
 						"indexed": false,
 						"internalType": "contract IERC20",
-						"name": "sell",
+						"name": "selling",
 						"type": "address"
 					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "sellAmount",
+						"name": "sellingAmount",
 						"type": "uint256"
 					},
 					{
 						"indexed": false,
 						"internalType": "contract IERC20",
-						"name": "buy",
+						"name": "buying",
 						"type": "address"
 					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "buyAmount",
+						"name": "buyingAmount",
 						"type": "uint256"
 					}
 				],
@@ -89,22 +89,22 @@
 				"inputs": [
 					{
 						"internalType": "contract IERC20",
-						"name": "sell",
+						"name": "selling",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "sellAmount",
+						"name": "sellingAmount",
 						"type": "uint256"
 					},
 					{
 						"internalType": "contract IERC20",
-						"name": "buy",
+						"name": "buying",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "buyAmount",
+						"name": "buyingAmount",
 						"type": "uint256"
 					}
 				],
@@ -150,27 +150,27 @@
 				"outputs": [
 					{
 						"internalType": "address",
-						"name": "seller",
+						"name": "owner",
 						"type": "address"
 					},
 					{
 						"internalType": "contract IERC20",
-						"name": "sell",
+						"name": "selling",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "sellAmount",
+						"name": "sellingAmount",
 						"type": "uint256"
 					},
 					{
 						"internalType": "contract IERC20",
-						"name": "buy",
+						"name": "buying",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "buyAmount",
+						"name": "buyingAmount",
 						"type": "uint256"
 					},
 					{
@@ -227,11 +227,11 @@
 			]
 		},
 		"SimpleSwap.sol": {
-			"keccak256": "0x00ae0750a7e284b4f8f3ac9eacaf9af37d90a5e972918a423ad20aab0319aadd",
+			"keccak256": "0xad3c75aa1aa54bf0f78fd3569dbd04588902a9c9ea6d62d3a536adc42c915520",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://26512c99c2276d752887c93b30b401170af42da81d86f2345e1d10f747eefc49",
-				"dweb:/ipfs/QmQQVDXTmSgbQAHDjo3E4iNsirxt4abCXb8UmTrmC2gej4"
+				"bzz-raw://5c251b4efb512524816bbd1599a67ee00e18d1701b3e6ac73610086e94d48f6a",
+				"dweb:/ipfs/QmPeuiBTMyLnzBuogpTB4AkojtDu7xQaeq1xCAW47E2tqh"
 			]
 		}
 	},
