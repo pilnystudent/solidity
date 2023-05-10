@@ -5,11 +5,11 @@ import "./ERC20/ERC20.sol";
 
 contract MYUSD is ERC20 {
     function name() public pure returns (string memory) {
-        return "USD Example";
+        return "USD Coin";
     }
 
     function symbol() public pure returns (string memory) {
-        return "USDE";
+        return "USDC";
     }
 
     function decimals() public pure returns (uint8) {

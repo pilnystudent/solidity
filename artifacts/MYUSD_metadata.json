@@ -267,7 +267,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"USDE.sol": "MYUSD"
+			"USDC.sol": "MYUSD"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -297,12 +297,12 @@
 				"dweb:/ipfs/QmawtLrBJHExgugEdock9Xxeny97AL3sKf8VLnMsjWpt15"
 			]
 		},
-		"USDE.sol": {
-			"keccak256": "0x6b3c6dd7faef92c642dcd86cb209297e31a6ced4fc0fc311c52d1fd5187045dc",
+		"USDC.sol": {
+			"keccak256": "0x178032557ce96398a1bcca74b5322d50fad8e24f28316312a1966bed7127b780",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b803c200c010c301bb9447e6bf44a068b1f4431a7d8658007d8b9ed928e81d83",
-				"dweb:/ipfs/QmdS8KEdnYuFGzdEj5wL8XXdgwCPLSqMpHPHZztk21vMhh"
+				"bzz-raw://d61c809fba0359cdccf670ad6f41c10aa8814afc364d8f53537fcb6ae5e20b73",
+				"dweb:/ipfs/QmbYre4UsoF1z4nTV4QmfEme5KLR9GvWUmSxdTwmwnyq58"
 			]
 		}
 	},
