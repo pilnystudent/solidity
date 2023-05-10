@@ -261,8 +261,29 @@
 			}
 		],
 		"devdoc": {
+			"events": {
+				"Approval(address,address,uint256)": {
+					"details": "Emitted when the allowance of a `spender` for an `owner` is set by a call to {approve}. `value` is the new allowance."
+				},
+				"Transfer(address,address,uint256)": {
+					"details": "Emitted when `value` tokens are moved from one account (`from`) to another (`to`). Note that `value` may be zero."
+				}
+			},
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"approve(address,uint256)": {
+					"details": "Sets `amount` as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event."
+				},
+				"decimals()": {
+					"details": "Returns the decimals places of the token."
+				},
+				"name()": {
+					"details": "Returns the name of the token."
+				},
+				"symbol()": {
+					"details": "Returns the symbol of the token."
+				}
+			},
 			"version": 1
 		},
 		"userdoc": {
@@ -287,28 +308,36 @@
 		"remappings": []
 	},
 	"sources": {
-		"ERC20/ERC20.sol": {
-			"keccak256": "0x5d386e27947269a63d2f4bef6b5cbed762ffb2db8a1bccf8d4f94add73728fb1",
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://de899c94994650b11ba1f72c848135544df0589afbea24a7d0b490b1cda69b29",
-				"dweb:/ipfs/QmcbLf2o1J1t2W1JEYbP93Nd6yZGD9UKdnbGH2DMBQf6ez"
+				"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+				"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
 			]
 		},
-		"ERC20/IERC20.sol": {
-			"keccak256": "0x45ad0f98ae2c24f4749573ab40eec8cd964dc3410b4f30fc397ba637f1508888",
+		"@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+			"keccak256": "0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bb055965b2b5202ff0816dacb3ded36c8505b2c6fa6d351f4fc216bc7cf8097a",
-				"dweb:/ipfs/QmYDYikanwzJ1qH4Ahkf67o51Nc4nEiFh1SwTYv7ipwp77"
+				"bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd",
+				"dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8"
+			]
+		},
+		"ERC/ERC20.sol": {
+			"keccak256": "0x52ebf71e369ae3e87ea0fe2d54738c5cbcdbd297de7336387540602f870ab04b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cc180fa7da46e9e9ba93928744ad3d1f5c2625fe1e89efbbabe9073d2da4ad1f",
+				"dweb:/ipfs/QmNdfRdk5CMtWXhF3r36sVitG1WG2LgQPmmMX8C7R84fTS"
 			]
 		},
 		"WETH.sol": {
-			"keccak256": "0x8e13aca2bc42090cb18372fd6d21829ece3fc3dbc4e8a9898ae92a06c40bf7ac",
+			"keccak256": "0x0957607f851d27d34623737af1bcd3af51f0e3925924c2d304d155260d8950e3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6fa43a8ff3ea0dcfd6b73d516ffd03c807ca75b4e6080252b94dc97ceb423fa5",
-				"dweb:/ipfs/QmdjVskd3aq2N1qfGqcUj17KzYg5mN2z3kBZc45qQAi5qD"
+				"bzz-raw://6b4cbaa58d4ef8d423f39b2b7a120795cbeda461fdc9dc62aba83af03192a833",
+				"dweb:/ipfs/QmeHowXyTpds2B8bBSzLxYvZ7rGRoT2kGnkuqaiSoEw2Bj"
 			]
 		}
 	},

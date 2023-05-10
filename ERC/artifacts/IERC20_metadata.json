@@ -59,12 +59,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "owner",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "spender",
 						"type": "address"
 					}
 				],
@@ -107,7 +107,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "account",
 						"type": "address"
 					}
 				],
@@ -117,6 +117,45 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "decimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -202,7 +241,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"ERC20/ERC20.sol": "ERC20"
+			"ERC20/IERC20.sol": "IERC20"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -216,20 +255,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"ERC20/ERC20.sol": {
-			"keccak256": "0xd95450106b0b91f301109a0678bff5a6bf42f8cac4a8e7d50696f524d4486934",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://9ab1b9c4dc31ee56fd9175b4d50cfe698dc1409bd0d2bb7d7c8daabcccc3fc22",
-				"dweb:/ipfs/QmXcV83oNrwuBbVGPq2od8ijgWpB3ac3SgmSD4VJrNbU5y"
-			]
-		},
 		"ERC20/IERC20.sol": {
-			"keccak256": "0x45ad0f98ae2c24f4749573ab40eec8cd964dc3410b4f30fc397ba637f1508888",
+			"keccak256": "0xb46e838dcb2c46333734ca1371a3dc226c77f0d2765485f65f443c730ed6126d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bb055965b2b5202ff0816dacb3ded36c8505b2c6fa6d351f4fc216bc7cf8097a",
-				"dweb:/ipfs/QmYDYikanwzJ1qH4Ahkf67o51Nc4nEiFh1SwTYv7ipwp77"
+				"bzz-raw://2c565acefc6110870629b6ef9a49d6b94c3d1138f461885f3a003511948ce02d",
+				"dweb:/ipfs/QmX1qDqG4ZPWY7Tbx4UUTdXHFgcoduK3z9LjqP64oYu4aK"
 			]
 		}
 	},
