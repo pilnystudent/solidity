@@ -267,7 +267,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"MYUSD.sol": "MYUSD"
+			"USDE.sol": "MYUSD"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -297,7 +297,7 @@
 				"dweb:/ipfs/QmawtLrBJHExgugEdock9Xxeny97AL3sKf8VLnMsjWpt15"
 			]
 		},
-		"MYUSD.sol": {
+		"USDE.sol": {
 			"keccak256": "0x6b3c6dd7faef92c642dcd86cb209297e31a6ced4fc0fc311c52d1fd5187045dc",
 			"license": "MIT",
 			"urls": [
