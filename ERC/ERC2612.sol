@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import "./ERC/IERC2612";
+import "./IERC20Permit.sol";
+import "./ERC20.sol";
+//import "@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol";
 
-contract ERC2612 is IERC2612, ERC20 {
+abstract contract ERC2612 is ERC20, IERC20Permit {
     bytes32 public constant PERMIT_TYPEHASH = keccak256("Permit(address owner,address spender,uint256 value,uint256 nonce,uint256 deadline)");
 
     uint256 internal immutable INITIAL_CHAIN_ID;

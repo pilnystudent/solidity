@@ -94,7 +94,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"ERC/IERC20Permit.sol": "IERC2612"
+			"ERC/IERC20Permit.sol": "IERC20Permit"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -109,11 +109,11 @@
 	},
 	"sources": {
 		"ERC/IERC20Permit.sol": {
-			"keccak256": "0xf7d46bd6cf9faa1c43868be29af156621f20a5218cccbefff47f615c3cb8ad58",
+			"keccak256": "0x66dcaf7c663ce4b6dc65a7bf385e31d68889361ec634a9c638c1453df193b6c0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7f0e9904169e47d40de7cbfd4664be035ad19d6a86d847da9f8c0898b19f4167",
-				"dweb:/ipfs/QmaiyX8wPq1NpUZrz7zHT5A54beve9kWydw4WYXqqeitpN"
+				"bzz-raw://0409e0bd856a8a2d7ebbe0496c9152131fdaa7264dff826820e8ec7a159840fc",
+				"dweb:/ipfs/QmVRfm45QmwH8T3QU35BkLWx8fMhHp68qDvreVkGbouoPE"
 			]
 		}
 	},

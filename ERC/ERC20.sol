@@ -10,9 +10,10 @@ abstract contract ERC20 is IERC20, IERC20Metadata {
     mapping(address => mapping(address => uint256)) public allowance;
 
     function transfer(address recipient, uint256 amount) external returns (bool) {
-        balanceOf[msg.sender] -= amount;
+        require(balanceOf[msg.sender] >= amount, "insufficient balance");
         unchecked {
-            balanceOf[recipient] += amount; // Cannot overflow
+            balanceOf[msg.sender] -= amount;
+            balanceOf[recipient] += amount;
         }
         emit Transfer(msg.sender, recipient, amount);
         return true;
@@ -29,9 +30,11 @@ abstract contract ERC20 is IERC20, IERC20Metadata {
         address recipient,
         uint256 amount
     ) external returns (bool) {
-        allowance[sender][msg.sender] -= amount;
-        balanceOf[sender] -= amount;
+        require(allowance[sender][msg.sender] >= amount, "insufficient allowance");
+        require(balanceOf[sender] >= amount, "insufficient balance");
         unchecked {
+            allowance[sender][msg.sender] -= amount;
+            balanceOf[sender] -= amount;
             balanceOf[recipient] += amount; // Cannot overflow
         }
         emit Transfer(sender, recipient, amount);

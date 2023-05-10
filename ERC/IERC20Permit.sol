@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-interface IERC2612 {
+interface IERC20Permit {
     function permit(
         address owner,
         address spender,
