@@ -11,7 +11,7 @@
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "owner",
+						"name": "seller",
 						"type": "address"
 					},
 					{
@@ -48,13 +48,13 @@
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "sender",
+						"name": "buyer",
 						"type": "address"
 					},
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "owner",
+						"name": "seller",
 						"type": "address"
 					},
 					{
@@ -150,7 +150,7 @@
 				"outputs": [
 					{
 						"internalType": "address",
-						"name": "owner",
+						"name": "seller",
 						"type": "address"
 					},
 					{
@@ -227,11 +227,11 @@
 			]
 		},
 		"SimpleSwap.sol": {
-			"keccak256": "0x9fd508ee890acc7bc1336445046f2abb13d50ac34e8d82110079866e77bf3ee8",
+			"keccak256": "0x176c20d4698dd5d185cf50a63c57a9cf46e6ccedc2c10f693c3444baef58de82",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8e0b587aa792ae0c293c8ffd68dab757046b35dedf4b8c04ca0874babc3ff13f",
-				"dweb:/ipfs/QmUh5zbwZW2Qhgsk7cfchD6Au8mgQy1t1rmd9hzaX1QZYd"
+				"bzz-raw://6ad14fa018b4b0a6c3acf8490498e6504b7c978f13e2e4c8829917de77634284",
+				"dweb:/ipfs/QmUP7VnFTAAymZ4R15kyPQwSij93LexAZdaGLxMpRDVxD9"
 			]
 		}
 	},

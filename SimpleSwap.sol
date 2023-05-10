@@ -5,7 +5,7 @@ import "./ERC20/ERC20.sol";
 
 contract SimpleSwap {
     struct Offer {
-        address owner;
+        address seller;
         IERC20 selling;
         uint256 sellingAmount;
         IERC20 buying;
@@ -31,12 +31,12 @@ contract SimpleSwap {
         Offer storage offer = offers[index];
         require(offer.active == true, "offer is inactive");
         offer.selling.transfer(msg.sender, offer.sellingAmount);
-        offer.buying.transferFrom(msg.sender, offer.owner, offer.buyingAmount);
+        offer.buying.transferFrom(msg.sender, offer.seller, offer.buyingAmount);
         offer.active = false;
-        emit Exchange(msg.sender, offer.owner, offer.selling, offer.sellingAmount, offer.buying, offer.buyingAmount);
+        emit Exchange(msg.sender, offer.seller, offer.selling, offer.sellingAmount, offer.buying, offer.buyingAmount);
         return true;
     }
 
-    event Add(address indexed owner, IERC20 selling, uint256 sellingAmount, IERC20 buying, uint256 buyingAmount);
-    event Exchange(address indexed sender, address indexed owner, IERC20 selling, uint256 sellingAmount, IERC20 buying, uint256 buyingAmount);
+    event Add(address indexed seller, IERC20 selling, uint256 sellingAmount, IERC20 buying, uint256 buyingAmount);
+    event Exchange(address indexed buyer, address indexed seller, IERC20 selling, uint256 sellingAmount, IERC20 buying, uint256 buyingAmount);
 }
