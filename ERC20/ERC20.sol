@@ -8,18 +8,6 @@ contract ERC20 is IERC20 {
     mapping(address => uint256) public balanceOf;
     mapping(address => mapping(address => uint256)) public allowance;
 
-    function name() public pure returns (string memory) {
-        return "My USD stablecoin";
-    }
-
-    function symbol() public pure returns (string memory) {
-        return "MYUSD";
-    }
-
-    function decimals() public pure returns (uint8) {
-        return 18;
-    }
-
     function transfer(address recipient, uint256 amount) external returns (bool) {
         balanceOf[msg.sender] -= amount;
         unchecked {
