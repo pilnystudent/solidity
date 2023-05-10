@@ -51,13 +51,17 @@ contract ERC20 is IERC20 {
 
     function mint(uint256 amount) external {
         balanceOf[msg.sender] += amount;
-        totalSupply += amount;
+        unchecked {
+            totalSupply += amount; // Cannot overflow
+        }
         emit Transfer(address(0), msg.sender, amount);
     }
 
     function burn(uint256 amount) external {
         balanceOf[msg.sender] -= amount;
-        totalSupply -= amount;
+        unchecked {
+            totalSupply -= amount; // Cannot overflow
+        }
         emit Transfer(msg.sender, address(0), amount);
     }
 }
