@@ -16,20 +16,22 @@ contract WETH is ERC20 {
         return 18;
     }
 
-    function mint() external payable {
+    function mint() external payable returns (bool) {
         unchecked {
             balanceOf[msg.sender] += msg.value; // Cannot overflow
             totalSupply += msg.value; // Cannot overflow
         }
         emit Transfer(address(0), msg.sender, msg.value);
+        return true;
     }
 
-    function burn(uint256 amount) external {
+    function burn(uint256 amount) external returns (bool) {
         balanceOf[msg.sender] -= amount;
         unchecked {
             totalSupply -= amount; // Cannot overflow
         }
         payable(msg.sender).transfer(amount);
         emit Transfer(msg.sender, address(0), amount);
+        return true;
     }
 }

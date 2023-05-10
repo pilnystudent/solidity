@@ -1,0 +1,100 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner1",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IERC20",
+						"name": "token1",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "owner2",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IERC20",
+						"name": "token2",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount2",
+						"type": "uint256"
+					}
+				],
+				"name": "swap",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"TokenSwap.sol": "TokenSwap"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ERC20/ERC20.sol": {
+			"keccak256": "0xd95450106b0b91f301109a0678bff5a6bf42f8cac4a8e7d50696f524d4486934",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9ab1b9c4dc31ee56fd9175b4d50cfe698dc1409bd0d2bb7d7c8daabcccc3fc22",
+				"dweb:/ipfs/QmXcV83oNrwuBbVGPq2od8ijgWpB3ac3SgmSD4VJrNbU5y"
+			]
+		},
+		"ERC20/IERC20.sol": {
+			"keccak256": "0x45ad0f98ae2c24f4749573ab40eec8cd964dc3410b4f30fc397ba637f1508888",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bb055965b2b5202ff0816dacb3ded36c8505b2c6fa6d351f4fc216bc7cf8097a",
+				"dweb:/ipfs/QmYDYikanwzJ1qH4Ahkf67o51Nc4nEiFh1SwTYv7ipwp77"
+			]
+		},
+		"TokenSwap.sol": {
+			"keccak256": "0xb6c585aae87bb8e8e5d1af2319732f2265caff9f3b456bdf13d1d48d89b93084",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d385cd89b4a760fc6c3158a2a1a1c8dbe13877dd3418db0f721b69b0b3c31008",
+				"dweb:/ipfs/QmR6fza2uZoFbV3Yf6vbeU4Hc1RPzPD7VELM7FSWtGoxGM"
+			]
+		}
+	},
+	"version": 1
+}

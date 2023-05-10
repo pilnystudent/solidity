@@ -131,7 +131,13 @@
 					}
 				],
 				"name": "burn",
-				"outputs": [],
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -151,7 +157,13 @@
 			{
 				"inputs": [],
 				"name": "mint",
-				"outputs": [],
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
 				"stateMutability": "payable",
 				"type": "function"
 			},
@@ -292,11 +304,11 @@
 			]
 		},
 		"WETH.sol": {
-			"keccak256": "0xf6aeb7298e63db8469ded794c1c9656024cc34956bc7040aa20e1bd16bd44612",
+			"keccak256": "0xb219dea920be7589a50ab785c2df60fcb8f749a3015c07631c639518fe1cb3c5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://01976ae4fd4573d1d862649ce3f12ce9e42187167270aded7a1344b7ccaf50c6",
-				"dweb:/ipfs/QmX86f4mTWGY3r7ZxgTyWJQkWf8WHp7sAw57smbpRvN8UT"
+				"bzz-raw://d2e34e94a9210e995eb8e11ec5b7b1a2e0f4b46fb1582e09e1995dae769075b7",
+				"dweb:/ipfs/QmVQLfDxHQNiM2kzTfpTKbTM8P5R2voY8i1wHihnt8TLK3"
 			]
 		}
 	},

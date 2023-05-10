@@ -131,7 +131,13 @@
 					}
 				],
 				"name": "burn",
-				"outputs": [],
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -157,7 +163,13 @@
 					}
 				],
 				"name": "mint",
-				"outputs": [],
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -298,11 +310,11 @@
 			]
 		},
 		"USDC.sol": {
-			"keccak256": "0x3b1e1a450e0eb09fe367983baa0585fa642140b35fd5ef8fb44044b3061d525a",
+			"keccak256": "0x784fda97a029395fa21909d3e3ac50b255b5c7a6397b6db01415fae4066b7578",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://725273ba5dda74f9398fb597a0c085d7b0c896d4d01bed0401603347e6d5baf4",
-				"dweb:/ipfs/QmZoHm22Dw5Nn7Yv3xcqaYCcYXSFDqFyvmghxZPkNT1b49"
+				"bzz-raw://51c6b508fefa2be5f6e37dd186b3e518a62b39c56abc63253410924ec2853b80",
+				"dweb:/ipfs/Qmdyg6Mh1E5WgbfcdGknJQZaZNkJCnjQ1eHMuVxYPuiyTa"
 			]
 		}
 	},
