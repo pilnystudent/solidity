@@ -59,12 +59,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "owner",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "spender",
 						"type": "address"
 					}
 				],
@@ -107,7 +107,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "account",
 						"type": "address"
 					}
 				],
@@ -120,32 +120,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "burn",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "mint",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -228,7 +202,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"ERC20/ERC20.sol": "ERC20"
+			"ERC20/IERC20.sol": "IERC20"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -242,20 +216,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"ERC20/ERC20.sol": {
-			"keccak256": "0x1a91db9e9232cd90598264967c47d3d96198a044bd54d565509d4875c8a240eb",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://f6f92fbeb0a2fffd129312ab10bda2ae9c0f79466f079f75ab36ec2b965fd2a9",
-				"dweb:/ipfs/QmdAgdDUTAtchecVJxYEgarnkvmQF3Kq4r4NU5FRTSsRhm"
-			]
-		},
 		"ERC20/IERC20.sol": {
-			"keccak256": "0x8964e789a5c74096cb280d8703632f71d6ed94562611582781e90219c0b3355b",
+			"keccak256": "0x5a06dc6e0fc04f04ff1f4fc40d023de28452635a8869e0683b9f216f03d2c3b9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9e5f953c751862b6843eb92b6ec5089b909010ed73c6002fb53429ded525115f",
-				"dweb:/ipfs/QmawtLrBJHExgugEdock9Xxeny97AL3sKf8VLnMsjWpt15"
+				"bzz-raw://f6f7e6b96301fc63bb56daf6e66c824c112fb62985fb71c40d11775fe5f73232",
+				"dweb:/ipfs/QmcRRfiL93vuYkbfuNKz4K85vzXh4qpotmfhdwfyM4pNWc"
 			]
 		}
 	},
