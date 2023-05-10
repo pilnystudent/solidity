@@ -21,13 +21,7 @@ contract SimpleSwap {
         uint256 buyAmount
     ) public returns (bool) {
         sell.transferFrom(msg.sender, address(this), sellAmount);
-        Offer memory offer;
-        offer.seller = msg.sender;
-        offer.sell = sell;
-        offer.sellAmount = sellAmount;
-        offer.buy = buy;
-        offer.buyAmount = buyAmount;
-        offers.push(offer);
+        offers.push(Offer(msg.sender, sell, sellAmount, buy, buyAmount));
         return true;
     }
 
