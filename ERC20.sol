@@ -9,11 +9,11 @@ contract ERC20 is IERC20 {
     mapping(address => mapping(address => uint256)) public allowance;
 
     function name() public pure returns (string memory) {
-        return "My Token Name";
+        return "My USD stablecoin";
     }
 
     function symbol() public pure returns (string memory) {
-        return "MYTOKEN";
+        return "MYUSD";
     }
 
     function decimals() public pure returns (uint8) {
