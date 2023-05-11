@@ -10,10 +10,13 @@ abstract contract Ownable {
         owner = msg.sender;
     }
 
-    function updateOwner(address newOwner) external returns (bool) {
-        require(msg.sender == owner, "only owner can update owner");
+    modifier onlyOwner() {
+        require(msg.sender == owner, "only owner");
+        _;
+    }
+
+    function updateOwner(address newOwner) external onlyOwner {
         owner = newOwner;
         emit UpdateOwner(newOwner);
-        return true;
     }
 }
