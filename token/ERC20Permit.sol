@@ -6,7 +6,6 @@ import {IERC20Permit} from "@openzeppelin/contracts/token/ERC20/extensions/draft
 
 abstract contract ERC20Permit is ERC20, IERC20Permit {
     bytes32 public DOMAIN_SEPARATOR;
-
     mapping(address => uint256) public nonces;
 
     constructor() {
