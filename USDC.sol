@@ -8,12 +8,12 @@ import {Ownable} from "./access/Ownable.sol";
 contract USDC is ERC20, ERC20Permit, Ownable {
     constructor() ERC20("USD Coin", "USDC", 18) {}
 
-    struct Mintable {
+    struct Balance {
         uint256 limit;
         uint256 minted;
     }
 
-    mapping(address => Mintable) public minterBalance;
+    mapping(address => Balance) public minterBalance;
 
     event UpdateMinter(address indexed minter, uint256 limit);
 
