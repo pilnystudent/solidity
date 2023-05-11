@@ -64,7 +64,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"token/ERC20Owner.sol": "ERC20Owner"
+			"access/Ownable.sol": "ERC20Owner"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -78,7 +78,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"token/ERC20Owner.sol": {
+		"access/Ownable.sol": {
 			"keccak256": "0x48831b0f91b6e43a7e02ce0a712a5897a2efab9b6256a3744eacf30e2c6e750c",
 			"license": "MIT",
 			"urls": [

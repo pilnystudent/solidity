@@ -420,35 +420,35 @@
 			]
 		},
 		"USDC.sol": {
-			"keccak256": "0x27c6008979e22e909e878db8c22444e00c66a854df44678a3f8745a68fbb34d2",
+			"keccak256": "0xc3b292f7cf6a456b88efa8cbd14615a615de907416dbe2ea8c41075aef622221",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b8c4a9fe1a95bd04b2363e41d38b4011bdadd7f2a08c61f011b40d727a987c3a",
-				"dweb:/ipfs/Qmd8aaUwmU6Ac5Wri3SgsRAyt5CjuaCAb5MCeXKzAZL77v"
+				"bzz-raw://f369e915b7ed3add987d38fac662be689bc6eca734e4849cc6b5f020a5c72974",
+				"dweb:/ipfs/Qmax3tA1n9pMTVHyBWHfSXgqqzSFH5gSQhTDv919JDVkNp"
+			]
+		},
+		"access/Ownable.sol": {
+			"keccak256": "0xdf4ca417d038b1f39d198de23102aa06de8e6b1e0d48bca5c64ba91c0470ce2c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5ca0b728dec35b52150f35e4e021f582aaef97e8cf240df96c59191893bc273d",
+				"dweb:/ipfs/QmeLNogf3r7tnYwdySuhhFsPWUgHuVT26mmmHhdrfjVz5J"
 			]
 		},
 		"token/ERC20.sol": {
-			"keccak256": "0x391205b5939b32c4238e2ba72696c602abb80863a45fd858428e4c1b53cb8609",
+			"keccak256": "0x6a6dff6f6c8491beae99ea56596e826928bd62e7c56779770643132a10385920",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://258d31238dfdce3ad2582c4b8002c654dee6c89566ccf98f10add432e4213f63",
-				"dweb:/ipfs/QmV43YczmRVSYcPEvtFpTG1WVJpoxCBdmnsve8TCegysp9"
-			]
-		},
-		"token/ERC20Owner.sol": {
-			"keccak256": "0x7bc21541a5470294b6620bd187e680592f494c8b2d9d1f0d87caf8713a88baa5",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://86e0663459d296a82469a232ef037cf5ca96841509a8709e007dcd560019e5c3",
-				"dweb:/ipfs/QmbhwnDK7YRV83eThs7MFkJt2LN7CLhMyhj5E4yxHoZaXG"
+				"bzz-raw://3553bff67131f71e67474f67155fbb31a6c19d2150adc9b434910848ac17a4cf",
+				"dweb:/ipfs/QmbdFxngPPgY9J94LFkgPXHjmLVy4Pc7fv7im9S7yQPASE"
 			]
 		},
 		"token/ERC20Permit.sol": {
-			"keccak256": "0x7b59f953cc399f965868634e0be63c7a3b5619a36be6f1a0d95a1fea69828cc3",
+			"keccak256": "0xd30676daf077cf399e29f749c0e549ba85fee06c4c39319322074c9ef99c7042",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ab1b4cf629ce36ba7e952b32efea74e05f7c55607c0eca76aeeaab80991b0302",
-				"dweb:/ipfs/QmfShPYuooKksTjs46Jym7bgox2TQM4ivQpwL5fxV6Cf53"
+				"bzz-raw://931f5df8c36a35f58260cf786e7d08e4fe877ff95ed3a8914a54ff302ae94a1b",
+				"dweb:/ipfs/QmQavPoAXt7CLj1hKYX9fUh6fdUsjmWNzUrVVXXifNhk1e"
 			]
 		}
 	},

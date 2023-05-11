@@ -64,7 +64,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"token/ERC20Owner.sol": "ERC20Owner"
+			"access/Ownable.sol": "Ownable"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -78,12 +78,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"token/ERC20Owner.sol": {
-			"keccak256": "0x48831b0f91b6e43a7e02ce0a712a5897a2efab9b6256a3744eacf30e2c6e750c",
+		"access/Ownable.sol": {
+			"keccak256": "0xdf4ca417d038b1f39d198de23102aa06de8e6b1e0d48bca5c64ba91c0470ce2c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d6e4b32f51581e1966b09fafcf85205574d88cb323da6b12964084ebc936a4e8",
-				"dweb:/ipfs/QmcCfV2zDK6ECrK5xVboii2QDaFyD6RWU7LDbWpzECmpJi"
+				"bzz-raw://5ca0b728dec35b52150f35e4e021f582aaef97e8cf240df96c59191893bc273d",
+				"dweb:/ipfs/QmeLNogf3r7tnYwdySuhhFsPWUgHuVT26mmmHhdrfjVz5J"
 			]
 		}
 	},

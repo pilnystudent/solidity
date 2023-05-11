@@ -1,9 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import "./ERC20.sol";
-
-abstract contract ERC20Owner is ERC20 {
+abstract contract Ownable {
     address public owner;
 
     event UpdateOwner(address indexed owner);
