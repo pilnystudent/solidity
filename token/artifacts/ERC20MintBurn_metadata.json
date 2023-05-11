@@ -6,11 +6,6 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -61,17 +56,23 @@
 				"type": "event"
 			},
 			{
-				"inputs": [],
-				"name": "DOMAIN_SEPARATOR",
-				"outputs": [
+				"anonymous": false,
+				"inputs": [
 					{
-						"internalType": "bytes32",
-						"name": "",
-						"type": "bytes32"
+						"indexed": true,
+						"internalType": "address",
+						"name": "minter",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
+				"name": "UpdateMinter",
+				"type": "event"
 			},
 			{
 				"inputs": [
@@ -141,6 +142,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "decimals",
 				"outputs": [
@@ -154,8 +174,14 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "deposit",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
 				"outputs": [
 					{
 						"internalType": "bool",
@@ -163,7 +189,26 @@
 						"type": "bool"
 					}
 				],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "mintAllowance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -180,65 +225,16 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
 					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
-					}
-				],
-				"name": "nonces",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "spender",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "value",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "deadline",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint8",
-						"name": "v",
-						"type": "uint8"
-					},
-					{
-						"internalType": "bytes32",
-						"name": "r",
-						"type": "bytes32"
-					},
-					{
-						"internalType": "bytes32",
-						"name": "s",
-						"type": "bytes32"
-					}
-				],
-				"name": "permit",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -323,12 +319,17 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "minter",
+						"type": "address"
+					},
+					{
 						"internalType": "uint256",
 						"name": "amount",
 						"type": "uint256"
 					}
 				],
-				"name": "withdraw",
+				"name": "updateMinter",
 				"outputs": [
 					{
 						"internalType": "bool",
@@ -353,9 +354,6 @@
 			"methods": {
 				"approve(address,uint256)": {
 					"details": "Sets `amount` as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event."
-				},
-				"permit(address,address,uint256,uint256,uint8,bytes32,bytes32)": {
-					"details": "Sets `value` as the allowance of `spender` over ``owner``'s tokens, given ``owner``'s signed approval. IMPORTANT: The same issues {IERC20-approve} has related to transaction ordering also apply here. Emits an {Approval} event. Requirements: - `spender` cannot be the zero address. - `deadline` must be a timestamp in the future. - `v`, `r` and `s` must be a valid `secp256k1` signature from `owner` over the EIP712-formatted function arguments. - the signature must use ``owner``'s current nonce (see {nonces}). For more information on the signature format, see the https://eips.ethereum.org/EIPS/eip-2612#specification[relevant EIP section]."
 				}
 			},
 			"version": 1
@@ -368,7 +366,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"WETH.sol": "WETH"
+			"token/ERC20Owner.sol": "ERC20MintBurn"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -398,22 +396,6 @@
 				"dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8"
 			]
 		},
-		"@openzeppelin/contracts/token/ERC20/extensions/draft-IERC20Permit.sol": {
-			"keccak256": "0xf41ca991f30855bf80ffd11e9347856a517b977f0a6c2d52e6421a99b7840329",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://b2717fd2bdac99daa960a6de500754ea1b932093c946388c381da48658234b95",
-				"dweb:/ipfs/QmP6QVMn6UeA3ByahyJbYQr5M6coHKBKsf3ySZSfbyA8R7"
-			]
-		},
-		"WETH.sol": {
-			"keccak256": "0x0217f2c60d3218e7738336aff6bd481785fc9024e441006158680650527df759",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://27e535b3de931368fa165e98feec4fe0d8c31b60773bf12f23de640585389d22",
-				"dweb:/ipfs/QmTpykbPi4kCDpzDhzASoSgvcXkK8p25tE95185YWHQJLj"
-			]
-		},
 		"token/ERC20.sol": {
 			"keccak256": "0x391205b5939b32c4238e2ba72696c602abb80863a45fd858428e4c1b53cb8609",
 			"license": "MIT",
@@ -422,12 +404,12 @@
 				"dweb:/ipfs/QmV43YczmRVSYcPEvtFpTG1WVJpoxCBdmnsve8TCegysp9"
 			]
 		},
-		"token/ERC20Permit.sol": {
-			"keccak256": "0x7b59f953cc399f965868634e0be63c7a3b5619a36be6f1a0d95a1fea69828cc3",
+		"token/ERC20Owner.sol": {
+			"keccak256": "0x2d5f14bd821e08118425a06abacd7eee17ed994e41deddb48f5ed6b6613a895f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ab1b4cf629ce36ba7e952b32efea74e05f7c55607c0eca76aeeaab80991b0302",
-				"dweb:/ipfs/QmfShPYuooKksTjs46Jym7bgox2TQM4ivQpwL5fxV6Cf53"
+				"bzz-raw://1b68f3e804c14ed6ec36b9b77501ffcc12708b1baa56a84f7f8024475f4b6e99",
+				"dweb:/ipfs/QmTZ8y6D2i52A4E4L1eETRBT2eUeN6771QEFx276ZxDFJc"
 			]
 		}
 	},

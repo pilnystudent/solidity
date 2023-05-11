@@ -6,11 +6,6 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -151,19 +146,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "deposit",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -319,25 +301,6 @@
 				],
 				"stateMutability": "nonpayable",
 				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "withdraw",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -358,6 +321,14 @@
 					"details": "Sets `value` as the allowance of `spender` over ``owner``'s tokens, given ``owner``'s signed approval. IMPORTANT: The same issues {IERC20-approve} has related to transaction ordering also apply here. Emits an {Approval} event. Requirements: - `spender` cannot be the zero address. - `deadline` must be a timestamp in the future. - `v`, `r` and `s` must be a valid `secp256k1` signature from `owner` over the EIP712-formatted function arguments. - the signature must use ``owner``'s current nonce (see {nonces}). For more information on the signature format, see the https://eips.ethereum.org/EIPS/eip-2612#specification[relevant EIP section]."
 				}
 			},
+			"stateVariables": {
+				"DOMAIN_SEPARATOR": {
+					"details": "Returns the domain separator used in the encoding of the signature for {permit}, as defined by {EIP712}."
+				},
+				"nonces": {
+					"details": "Returns the current nonce for `owner`. This value must be included whenever a signature is generated for {permit}. Every successful call to {permit} increases ``owner``'s nonce by one. This prevents a signature from being used multiple times."
+				}
+			},
 			"version": 1
 		},
 		"userdoc": {
@@ -368,7 +339,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"WETH.sol": "WETH"
+			"token/ERC20Permit.sol": "ERC20Permit"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -404,14 +375,6 @@
 			"urls": [
 				"bzz-raw://b2717fd2bdac99daa960a6de500754ea1b932093c946388c381da48658234b95",
 				"dweb:/ipfs/QmP6QVMn6UeA3ByahyJbYQr5M6coHKBKsf3ySZSfbyA8R7"
-			]
-		},
-		"WETH.sol": {
-			"keccak256": "0x0217f2c60d3218e7738336aff6bd481785fc9024e441006158680650527df759",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://27e535b3de931368fa165e98feec4fe0d8c31b60773bf12f23de640585389d22",
-				"dweb:/ipfs/QmTpykbPi4kCDpzDhzASoSgvcXkK8p25tE95185YWHQJLj"
 			]
 		},
 		"token/ERC20.sol": {

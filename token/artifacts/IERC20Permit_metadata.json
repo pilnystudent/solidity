@@ -94,7 +94,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"ERC/IERC20Permit.sol": "IERC20Permit"
+			"token/IERC20Permit.sol": "IERC20Permit"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -108,7 +108,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"ERC/IERC20Permit.sol": {
+		"token/IERC20Permit.sol": {
 			"keccak256": "0x66dcaf7c663ce4b6dc65a7bf385e31d68889361ec634a9c638c1453df193b6c0",
 			"license": "MIT",
 			"urls": [
