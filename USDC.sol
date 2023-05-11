@@ -13,21 +13,21 @@ contract USDC is ERC20, ERC20Permit, Ownable {
         uint256 minted;
     }
 
-    mapping(address => MinterLimit) public minters;
+    mapping(address => MinterLimit) public minterBalance;
 
     event UpdateMinter(address indexed minter, uint256 limit);
 
     function updateMinter(address minter, uint256 limit) external onlyOwner returns (bool) {
-        minters[minter].limit = limit;
+        minterBalance[minter].limit = limit;
         emit UpdateMinter(minter, limit);
         return true;
     }
 
     function mint(uint256 amount) external returns (bool) {
-        require(minters[msg.sender].limit >= minters[msg.sender].limit + amount, "insufficient mint limit");
+        require(minterBalance[msg.sender].limit >= minterBalance[msg.sender].minted + amount, "insufficient mint limit");
         require(totalSupply + amount >= amount, "total supply overflow");
         unchecked {
-            minters[msg.sender].minted += amount;
+            minterBalance[msg.sender].minted += amount;
             balanceOf[msg.sender] += amount;
             totalSupply += amount;
         }
@@ -36,10 +36,10 @@ contract USDC is ERC20, ERC20Permit, Ownable {
     }
 
     function burn(uint256 amount) external returns (bool) {
-        require(minters[msg.sender].minted >= amount, "insufficient burn limit");
+        require(minterBalance[msg.sender].minted >= amount, "insufficient burn limit");
         require(balanceOf[msg.sender] >= amount, "insufficient balance");
         unchecked {
-            minters[msg.sender].minted -= amount;
+            minterBalance[msg.sender].minted -= amount;
             balanceOf[msg.sender] -= amount;
             totalSupply -= amount;
         }

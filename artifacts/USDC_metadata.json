@@ -231,7 +231,7 @@
 						"type": "address"
 					}
 				],
-				"name": "minters",
+				"name": "minterBalance",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -519,11 +519,11 @@
 			]
 		},
 		"USDC.sol": {
-			"keccak256": "0x53d549c533cfc308605aa7e37516472714066ff895b63e4620b6d93735cb939e",
+			"keccak256": "0x4cad8b540e1cd357e52d2e4674011bb3b468d331524c59c87b888d58918ac774",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://47ededcbef145a667d913385489657760a6aba2c052e8a6ff3aea5ead9f507ca",
-				"dweb:/ipfs/QmRDgHCWQPKF1WGHoYTQDNBAthgcQPJ71V797VHB94rLDU"
+				"bzz-raw://89989987d69c6564bcb2efd8b30ec9a3010bd197328cd9d7283b64c68020dc10",
+				"dweb:/ipfs/QmakqGEgiaV38nukgL59YQXRra3ueLNic6uQnN1hQWA9XL"
 			]
 		},
 		"access/Ownable.sol": {
