@@ -519,11 +519,11 @@
 			]
 		},
 		"USDC.sol": {
-			"keccak256": "0x4cad8b540e1cd357e52d2e4674011bb3b468d331524c59c87b888d58918ac774",
+			"keccak256": "0x2c62d7c8b4392913dfac42b0ebf5512a7ccaa3a9eefb9b820ddd1ef66300eb1f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://89989987d69c6564bcb2efd8b30ec9a3010bd197328cd9d7283b64c68020dc10",
-				"dweb:/ipfs/QmakqGEgiaV38nukgL59YQXRra3ueLNic6uQnN1hQWA9XL"
+				"bzz-raw://ddd9230669d2e3a3f12d63b033da19c6ac21b9c006a379a01eba1928510f4b75",
+				"dweb:/ipfs/QmddA6UWWkkkWAHk5FfE84CHCp6hRQ95w3KrhTtarwzpjV"
 			]
 		},
 		"access/Ownable.sol": {
