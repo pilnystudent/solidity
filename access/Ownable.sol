@@ -4,7 +4,7 @@ pragma solidity ^0.8.17;
 abstract contract Ownable {
     address public owner;
 
-    event UpdateOwner(address indexed owner);
+    event UpdateOwner(address indexed newOwner);
 
     constructor() {
         owner = msg.sender;

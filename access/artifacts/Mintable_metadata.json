@@ -19,19 +19,6 @@
 				"type": "event"
 			},
 			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -58,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"access/Ownable.sol": "Ownable"
+			"access/Mintable.sol": "Mintable"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -72,12 +59,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"access/Ownable.sol": {
-			"keccak256": "0xec01ffcca466fcfbd0bd8d1a9802801672c941a2817625cf97b1453145e2728c",
+		"access/Mintable.sol": {
+			"keccak256": "0xb3a7afbc47b229be5ce5bdfd3d4deaa03c390d80ff74d02b1b428dfe368c2159",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b55afe0ff6b156f7e62d6eb2d1b7cefb7089a80e977bffab4ecf9677d15b02dd",
-				"dweb:/ipfs/QmXeYUcx13JceuT3ob41ocjoizro5cGxstrhUTyqe4K7Ea"
+				"bzz-raw://b7dabc5db53b34cd66fc8cb680c719e17bd2b64a4a449d08832d102aab16d80e",
+				"dweb:/ipfs/QmdLw75EXLY9UyC1dphe2oxnNQyJaQjhPBSH36spVdqSjr"
+			]
+		},
+		"access/Ownable.sol": {
+			"keccak256": "0xb8ebd3be92a2460530d408b4b11d1c4287f4eadabd56b50ef02dc085784c4d58",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ff7b04b829a9914bab55bb361ff82a01bf2b29ea59cff89a1f95fc2975a4f33d",
+				"dweb:/ipfs/Qmcoq9JVp8eSvxrhYqtEAxAoxy33c4TY1MvkLs5nFcdRFQ"
 			]
 		}
 	},

@@ -8,25 +8,26 @@ import {Ownable} from "./access/Ownable.sol";
 contract USDC is ERC20, ERC20Permit, Ownable {
     constructor() ERC20("USD Coin", "USDC", 18) {}
 
-    mapping(address => bool) public minters;
-
-    modifier onlyMinter() {
-        require(minters[msg.sender] == true, "only minter");
-        _;
+    struct MinterLimit {
+        uint256 limit;
+        uint256 minted;
     }
 
-    event UpdateMinter(address indexed minter, bool allow);
+    mapping(address => MinterLimit) public minters;
 
-    function updateMinter(address minter, bool allow) external onlyOwner returns (bool) {
-        require(msg.sender == owner, "only owner can update minter");
-        minters[minter] = allow;
-        emit UpdateMinter(minter, allow);
+    event UpdateMinter(address indexed minter, uint256 limit);
+
+    function updateMinter(address minter, uint256 limit) external onlyOwner returns (bool) {
+        minters[minter].limit = limit;
+        emit UpdateMinter(minter, limit);
         return true;
     }
 
-    function mint(uint256 amount) external onlyMinter returns (bool) {
+    function mint(uint256 amount) external returns (bool) {
+        require(minters[msg.sender].limit >= minters[msg.sender].limit + amount, "insufficient mint limit");
         require(totalSupply + amount >= amount, "total supply overflow");
         unchecked {
+            minters[msg.sender].minted += amount;
             balanceOf[msg.sender] += amount;
             totalSupply += amount;
         }
@@ -34,9 +35,11 @@ contract USDC is ERC20, ERC20Permit, Ownable {
         return true;
     }
 
-    function burn(uint256 amount) external onlyMinter returns (bool) {
+    function burn(uint256 amount) external returns (bool) {
+        require(minters[msg.sender].minted >= amount, "insufficient burn limit");
         require(balanceOf[msg.sender] >= amount, "insufficient balance");
         unchecked {
+            minters[msg.sender].minted -= amount;
             balanceOf[msg.sender] -= amount;
             totalSupply -= amount;
         }

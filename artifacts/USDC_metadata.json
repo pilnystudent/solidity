@@ -71,9 +71,9 @@
 					},
 					{
 						"indexed": false,
-						"internalType": "bool",
-						"name": "allow",
-						"type": "bool"
+						"internalType": "uint256",
+						"name": "limit",
+						"type": "uint256"
 					}
 				],
 				"name": "UpdateMinter",
@@ -85,7 +85,7 @@
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "owner",
+						"name": "newOwner",
 						"type": "address"
 					}
 				],
@@ -234,9 +234,14 @@
 				"name": "minters",
 				"outputs": [
 					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
+						"internalType": "uint256",
+						"name": "limit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minted",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -417,9 +422,9 @@
 						"type": "address"
 					},
 					{
-						"internalType": "bool",
-						"name": "allow",
-						"type": "bool"
+						"internalType": "uint256",
+						"name": "limit",
+						"type": "uint256"
 					}
 				],
 				"name": "updateMinter",
@@ -514,19 +519,19 @@
 			]
 		},
 		"USDC.sol": {
-			"keccak256": "0x259ff4a65cac0c13dc032295e7a8922840444980cae63c3f99c2d52c2e60bcab",
+			"keccak256": "0x53d549c533cfc308605aa7e37516472714066ff895b63e4620b6d93735cb939e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1a788b175cb98b3a7ec3432f158b66e5b90e3ddaa0c9acfb67da2eefe487adb4",
-				"dweb:/ipfs/QmW3P8cNXEM7dL9TsSyWanuRxMnzs8bcAfqcdcz5A1yboP"
+				"bzz-raw://47ededcbef145a667d913385489657760a6aba2c052e8a6ff3aea5ead9f507ca",
+				"dweb:/ipfs/QmRDgHCWQPKF1WGHoYTQDNBAthgcQPJ71V797VHB94rLDU"
 			]
 		},
 		"access/Ownable.sol": {
-			"keccak256": "0xcbb846ea0952b7b8092bc7974bd331975499bf372b1be185a8e39b479035c828",
+			"keccak256": "0xec01ffcca466fcfbd0bd8d1a9802801672c941a2817625cf97b1453145e2728c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3bc5ddc8e6224f5caaadff08f1de83bf759a7f093f9f42f7b17e9a341f95bedc",
-				"dweb:/ipfs/Qmd1FBCGxtvyUZJ77Q21RBAu8BpfpovsukVk1xxPXmjwyH"
+				"bzz-raw://b55afe0ff6b156f7e62d6eb2d1b7cefb7089a80e977bffab4ecf9677d15b02dd",
+				"dweb:/ipfs/QmXeYUcx13JceuT3ob41ocjoizro5cGxstrhUTyqe4K7Ea"
 			]
 		},
 		"token/ERC20.sol": {
