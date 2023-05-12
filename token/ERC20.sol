@@ -30,20 +30,20 @@ abstract contract ERC20 is IERC20, IERC20Metadata {
                             LOGIC INTERNAL
     ////////////////////////////////////////////////////////////*/
 
-    function _mint(address account, uint256 amount) internal {
+    function _mint(address to, uint256 amount) internal {
         totalSupply += amount;
         unchecked {
-            balanceOf[account] += amount;
+            balanceOf[to] += amount;
         }
-        emit Transfer(address(0), account, amount);
+        emit Transfer(address(0), to, amount);
     }
 
-    function _burn(address account, uint256 amount) internal {
-        balanceOf[account] -= amount;
+    function _burn(address from, uint256 amount) internal {
+        balanceOf[from] -= amount;
         unchecked {
             totalSupply -= amount;
         }
-        emit Transfer(account, address(0), amount);
+        emit Transfer(from, address(0), amount);
     }
 
     function _transfer(

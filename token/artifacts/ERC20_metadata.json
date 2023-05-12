@@ -310,11 +310,11 @@
 			]
 		},
 		"token/ERC20.sol": {
-			"keccak256": "0x53a2960aaae84c7854bf91534008379b9fed5a9aea5f00a1031177e70d6dff63",
+			"keccak256": "0x84aa61cb9eaa73d448330da16dcc1426d20153ff6e3c612c758369c026dd84d7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://de26d91771a7f8780639c9bfcf1277c5d2c0f8c8f2a55f63c14877c854ccffad",
-				"dweb:/ipfs/Qma4DKNQ8wWfz6QYiLDRjaVsjDZ7MR34f4k7iWSEF1uJAa"
+				"bzz-raw://fbd0ffbea4f05a82c21dc7fb0bdaa31490dda46baf6bfd17825c2b8b80e93804",
+				"dweb:/ipfs/QmQbUKiB6wAtngBmrFuVzBaEWA3tByaAGnC3SN5V1ZXt5b"
 			]
 		}
 	},
