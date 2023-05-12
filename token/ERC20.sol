@@ -72,8 +72,9 @@ abstract contract ERC20 is IERC20, IERC20Metadata {
         address spender,
         uint256 amount
     ) internal {
-        allowance[owner][spender] -= amount;
-        emit Approval(owner, spender, allowance[owner][spender]);
+        uint256 allowanceLeft = allowance[owner][spender] - amount;
+        allowance[owner][spender] = allowanceLeft;
+        emit Approval(owner, spender, allowanceLeft);
     }
 
     /*////////////////////////////////////////////////////////////
