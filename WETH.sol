@@ -2,10 +2,19 @@
 pragma solidity ^0.8.17;
 
 import {ERC20} from "./token/ERC20.sol";
-import {ERC20Permit} from "./token/ERC20Permit.sol";
+import {IWETH} from "./interface/IWETH.sol";
 
-contract WETH is ERC20, ERC20Permit {
+contract WETH is ERC20, IWETH {
+
+    /*////////////////////////////////////////////////////////////
+                            CONSTRUCTOR
+    ////////////////////////////////////////////////////////////*/
+
     constructor() ERC20("Wrapped Ethereum", "WETH", 18) {}
+
+    /*////////////////////////////////////////////////////////////
+                            LOGIC
+    ////////////////////////////////////////////////////////////*/
 
     function deposit() external payable returns (bool) {
         unchecked {

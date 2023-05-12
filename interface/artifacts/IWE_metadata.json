@@ -1,0 +1,127 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "minter",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "limit",
+						"type": "uint256"
+					}
+				],
+				"name": "UpdateMinter",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "minter",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "limit",
+						"type": "uint256"
+					}
+				],
+				"name": "updateMinter",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"interface/IWETH.sol": "IWE"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"interface/IWETH.sol": {
+			"keccak256": "0xfd82812f7339995de117f6c28ea67aef997706ed699b270d00011c9c5391afda",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a8d406050ddc09cd0b5c8b2b72ac7bd1d786ef00afaa7e09077575bd404fd198",
+				"dweb:/ipfs/QmeW4AzU97TbeAmWjFAS1fJ8cknxaXaRUnmK2La9B4qMSf"
+			]
+		}
+	},
+	"version": 1
+}

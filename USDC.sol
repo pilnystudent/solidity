@@ -2,20 +2,26 @@
 pragma solidity ^0.8.17;
 
 import {ERC20} from "./token/ERC20.sol";
-import {ERC20Permit} from "./token/ERC20Permit.sol";
 import {Ownable} from "./access/Ownable.sol";
+import {IUSDC} from "./interface/IUSDC.sol";
 
-contract USDC is ERC20, ERC20Permit, Ownable {
+contract USDC is ERC20, Ownable, IUSDC {
+
+    /*////////////////////////////////////////////////////////////
+                            CONSTRUCTOR
+    ////////////////////////////////////////////////////////////*/
+
     constructor() ERC20("USD Coin", "USDC", 18) {}
 
-    struct Balance {
-        uint256 limit;
-        uint256 minted;
-    }
+    /*////////////////////////////////////////////////////////////
+                            STORAGE
+    ////////////////////////////////////////////////////////////*/
 
     mapping(address => Balance) public minterBalance;
 
-    event UpdateMinter(address indexed minter, uint256 limit);
+    /*////////////////////////////////////////////////////////////
+                            LOGIC
+    ////////////////////////////////////////////////////////////*/
 
     function updateMinter(address minter, uint256 limit) external onlyOwner returns (bool) {
         minterBalance[minter].limit = limit;
@@ -24,8 +30,8 @@ contract USDC is ERC20, ERC20Permit, Ownable {
     }
 
     function mint(uint256 amount) external returns (bool) {
-        require(minterBalance[msg.sender].limit >= minterBalance[msg.sender].minted + amount, "insufficient mint limit");
-        require(totalSupply + amount >= amount, "total supply overflow");
+        require(minterBalance[msg.sender].limit >= minterBalance[msg.sender].minted + amount, "USDC: insufficient mint limit");
+        require(totalSupply + amount >= amount, "USDC: total supply overflow");
         unchecked {
             minterBalance[msg.sender].minted += amount;
             balanceOf[msg.sender] += amount;
@@ -36,8 +42,8 @@ contract USDC is ERC20, ERC20Permit, Ownable {
     }
 
     function burn(uint256 amount) external returns (bool) {
-        require(minterBalance[msg.sender].minted >= amount, "insufficient burn limit");
-        require(balanceOf[msg.sender] >= amount, "insufficient balance");
+        require(minterBalance[msg.sender].minted >= amount, "USDC: insufficient burn limit");
+        require(balanceOf[msg.sender] >= amount, "USDC: insufficient balance");
         unchecked {
             minterBalance[msg.sender].minted -= amount;
             balanceOf[msg.sender] -= amount;

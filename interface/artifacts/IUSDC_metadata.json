@@ -1,0 +1,127 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "minter",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "limit",
+						"type": "uint256"
+					}
+				],
+				"name": "UpdateMinter",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "minter",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "limit",
+						"type": "uint256"
+					}
+				],
+				"name": "updateMinter",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"interface/IUSDC.sol": "IUSDC"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"interface/IUSDC.sol": {
+			"keccak256": "0xcfa9859f2dab5d38aceaf80467f20894b907009386b07f26935ae1a17de5cb0d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6868e6959ae0f2f52506a79195b086377b3beb5be133eb301dd612a976b7907d",
+				"dweb:/ipfs/QmTKXvVgdfH42xevAFZWbuSAZdk9cS6xCymAbxFwQweeRp"
+			]
+		}
+	},
+	"version": 1
+}
