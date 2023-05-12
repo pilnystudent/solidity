@@ -143,13 +143,7 @@
 			{
 				"inputs": [],
 				"name": "deposit",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
+				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
 			},
@@ -196,7 +190,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "recipient",
+						"name": "to",
 						"type": "address"
 					},
 					{
@@ -220,12 +214,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "sender",
+						"name": "from",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "recipient",
+						"name": "to",
 						"type": "address"
 					},
 					{
@@ -254,13 +248,7 @@
 					}
 				],
 				"name": "withdraw",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
@@ -278,6 +266,12 @@
 			"methods": {
 				"approve(address,uint256)": {
 					"details": "Sets `amount` as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event."
+				},
+				"transfer(address,uint256)": {
+					"details": "Moves `amount` tokens from the caller's account to `to`. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "Moves `amount` tokens from `from` to `to` using the allowance mechanism. `amount` is then deducted from the caller's allowance. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
 				}
 			},
 			"version": 1
@@ -321,27 +315,27 @@
 			]
 		},
 		"WETH.sol": {
-			"keccak256": "0xb03acf25c0f19762bd9fdf1a9400370f9b9f4541bf6ca92f9056d7d07494de9d",
+			"keccak256": "0xa90865e2d0e435845cc5275d869fa67c0a6a6453862e8d3b155dc81d6b0c9f47",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8abe1112751c8259c34d048ce54d0e89e5ff9f3a8e66883defb317d5c50d3a9e",
-				"dweb:/ipfs/QmWJ6bAsJu4HBsU1AihTCRvDQ6pL3FPCFVsyLXopVR2x7H"
+				"bzz-raw://54f96650885d7d6a198371ad2498a69b57803dd5562e60ec0dac6fe04f4f2126",
+				"dweb:/ipfs/Qmd7iRmfMXQnxVBYp7rFR72mYU6viHXz8c2SkXPmYUcaig"
 			]
 		},
 		"interface/IWETH.sol": {
-			"keccak256": "0x89b481c5befb85d670d10f703237cd929ad55a6df3a206fe59e44f4ea86a79b1",
+			"keccak256": "0x2e8a276743d2e36235a3457aca95ac3c6e36dec5bb628e6c7cdfeae6061a89bf",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://193b64326d6b1bfc94422c6f75e8de4a68ce82adff13fa86cee571133cb8fb54",
-				"dweb:/ipfs/QmNcRFF8YybjSXRsGEoZoRywECDB1g77Sd7qQUvTBUpiBV"
+				"bzz-raw://5172c224002b26acfa437a3eb1b70fe0fdbc8e1755372b7362a554407486c205",
+				"dweb:/ipfs/QmZNevQyaMqgoU54PZXQZ9tcSrmCRTqtLKGZ3sNwvdwwcW"
 			]
 		},
 		"token/ERC20.sol": {
-			"keccak256": "0x9e63819282a7f3d50bb281f3d4abd8c056e5ad0add63c5afd64abdfb8bce9778",
+			"keccak256": "0x399bad09d325a96970f36ecb398359ff5a45f3ec71508b718fd42fff7a707560",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://69e4012151a0113bc18066e9bc7c147268d67aaada6e4efdcfda466d820b6f48",
-				"dweb:/ipfs/QmV2YkLdKfBXda81VsUJb5EMHUcpVM3iuWyWrHYJBNCGKp"
+				"bzz-raw://0016c396eb377fa3a006674924de5b7bc923254543f2b1c62ab494d44b7ea195",
+				"dweb:/ipfs/QmPjE36YwStJHZnPxC5uzdGPCbkmjKaBwyckZRsKeJn5bh"
 			]
 		}
 	},

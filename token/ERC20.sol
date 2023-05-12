@@ -20,49 +20,83 @@ abstract contract ERC20 is IERC20, IERC20Metadata {
                             CONSTRUCTOR
     ////////////////////////////////////////////////////////////*/
 
-    constructor(
-        string memory _name,
-        string memory _symbol,
-        uint8 _decimals
-    ) {
+    constructor(string memory _name, string memory _symbol) {
         name = _name;
         symbol = _symbol;
-        decimals = _decimals;
+        decimals = 18;
     }
 
     /*////////////////////////////////////////////////////////////
-                            LOGIC
+                            LOGIC INTERNAL
+    ////////////////////////////////////////////////////////////*/
+
+    function _mint(address account, uint256 amount) internal {
+        totalSupply += amount;
+        unchecked {
+            balanceOf[account] += amount;
+        }
+        emit Transfer(address(0), account, amount);
+    }
+
+    function _burn(address account, uint256 amount) internal {
+        balanceOf[account] -= amount;
+        unchecked {
+            totalSupply -= amount;
+        }
+        emit Transfer(account, address(0), amount);
+    }
+
+    function _transfer(
+        address from,
+        address to,
+        uint256 amount
+    ) internal {
+        balanceOf[from] -= amount;
+        unchecked {
+            balanceOf[to] += amount;
+        }
+        emit Transfer(from, to, amount);
+    }
+
+    function _approve(
+        address owner,
+        address spender,
+        uint256 amount
+    ) internal {
+        allowance[owner][spender] = amount;
+        emit Approval(owner, spender, amount);
+    }
+
+    function _spendAllowance(
+        address owner,
+        address spender,
+        uint256 amount
+    ) internal {
+        allowance[owner][spender] -= amount;
+        emit Approval(owner, spender, allowance[owner][spender]);
+    }
+
+    /*////////////////////////////////////////////////////////////
+                            LOGIC PUBLIC
     ////////////////////////////////////////////////////////////*/
 
     function approve(address spender, uint256 amount) external returns (bool) {
-        allowance[msg.sender][spender] = amount;
-        emit Approval(msg.sender, spender, amount);
+        _approve(msg.sender, spender, amount);
         return true;
     }
 
-    function transfer(address recipient, uint256 amount) external returns (bool) {
-        require(balanceOf[msg.sender] >= amount, "ERC20: insufficient balance");
-        unchecked {
-            balanceOf[msg.sender] -= amount;
-            balanceOf[recipient] += amount;
-        }
-        emit Transfer(msg.sender, recipient, amount);
+    function transfer(address to, uint256 amount) external returns (bool) {
+        _transfer(msg.sender, to, amount);
         return true;
     }
 
     function transferFrom(
-        address sender,
-        address recipient,
+        address from,
+        address to,
         uint256 amount
     ) external returns (bool) {
-        require(allowance[sender][msg.sender] >= amount, "ERC20: insufficient allowance");
-        require(balanceOf[sender] >= amount, "ERC20: insufficient balance");
-        unchecked {
-            allowance[sender][msg.sender] -= amount;
-            balanceOf[sender] -= amount;
-            balanceOf[recipient] += amount;
-        }
-        emit Transfer(sender, recipient, amount);
+        _spendAllowance(from, msg.sender, amount);
+        _transfer(from, to, amount);
         return true;
     }
 }

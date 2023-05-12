@@ -50,7 +50,7 @@
 		"gasEstimates": null,
 		"methodIdentifiers": {
 			"burn(uint256)": "42966c68",
-			"mint(uint256)": "a0712d68",
+			"mint(address,uint256)": "40c10f19",
 			"updateMinter(address,uint256)": "b8f883f9"
 		}
 	},
@@ -83,18 +83,17 @@
 				}
 			],
 			"name": "burn",
-			"outputs": [
-				{
-					"internalType": "bool",
-					"name": "",
-					"type": "bool"
-				}
-			],
+			"outputs": [],
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{
 			"inputs": [
+				{
+					"internalType": "address",
+					"name": "to",
+					"type": "address"
+				},
 				{
 					"internalType": "uint256",
 					"name": "amount",
@@ -102,13 +101,7 @@
 				}
 			],
 			"name": "mint",
-			"outputs": [
-				{
-					"internalType": "bool",
-					"name": "",
-					"type": "bool"
-				}
-			],
+			"outputs": [],
 			"stateMutability": "nonpayable",
 			"type": "function"
 		},
@@ -126,13 +119,7 @@
 				}
 			],
 			"name": "updateMinter",
-			"outputs": [
-				{
-					"internalType": "bool",
-					"name": "",
-					"type": "bool"
-				}
-			],
+			"outputs": [],
 			"stateMutability": "nonpayable",
 			"type": "function"
 		}

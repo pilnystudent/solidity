@@ -1,5 +1,5 @@
 {
-	"id": "f3cfba208faa3097547f899388f11445",
+	"id": "c214d229e2f52b57003776ef43a7c8c2",
 	"_format": "hh-sol-build-info-1",
 	"solcVersion": "0.8.18",
 	"solcLongVersion": "0.8.18+commit.87f61d96",
@@ -7,7 +7,7 @@
 		"language": "Solidity",
 		"sources": {
 			"interface/IUSDC.sol": {
-				"content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.17;\n\ninterface IUSDC {\n    struct Balance {\n        uint256 limit;\n        uint256 minted;\n    }\n\n    event UpdateMinter(address indexed minter, uint256 limit);\n\n    function updateMinter(address minter, uint256 limit) external returns (bool);\n\n    function mint(uint256 amount) external returns (bool);\n\n    function burn(uint256 amount) external returns (bool);\n}\n"
+				"content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.17;\n\ninterface IUSDC {\n    struct Balance {\n        uint256 limit;\n        uint256 minted;\n    }\n\n    event UpdateMinter(address indexed minter, uint256 limit);\n\n    function updateMinter(address minter, uint256 limit) external;\n\n    function mint(address to, uint256 amount) external;\n\n    function burn(uint256 amount) external;\n}\n"
 			}
 		},
 		"settings": {
@@ -70,18 +70,17 @@
 								}
 							],
 							"name": "burn",
-							"outputs": [
-								{
-									"internalType": "bool",
-									"name": "",
-									"type": "bool"
-								}
-							],
+							"outputs": [],
 							"stateMutability": "nonpayable",
 							"type": "function"
 						},
 						{
 							"inputs": [
+								{
+									"internalType": "address",
+									"name": "to",
+									"type": "address"
+								},
 								{
 									"internalType": "uint256",
 									"name": "amount",
@@ -89,13 +88,7 @@
 								}
 							],
 							"name": "mint",
-							"outputs": [
-								{
-									"internalType": "bool",
-									"name": "",
-									"type": "bool"
-								}
-							],
+							"outputs": [],
 							"stateMutability": "nonpayable",
 							"type": "function"
 						},
@@ -113,13 +106,7 @@
 								}
 							],
 							"name": "updateMinter",
-							"outputs": [
-								{
-									"internalType": "bool",
-									"name": "",
-									"type": "bool"
-								}
-							],
+							"outputs": [],
 							"stateMutability": "nonpayable",
 							"type": "function"
 						}
@@ -152,11 +139,11 @@
 						"legacyAssembly": null,
 						"methodIdentifiers": {
 							"burn(uint256)": "42966c68",
-							"mint(uint256)": "a0712d68",
+							"mint(address,uint256)": "40c10f19",
 							"updateMinter(address,uint256)": "b8f883f9"
 						}
 					},
-					"metadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"minter\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"limit\",\"type\":\"uint256\"}],\"name\":\"UpdateMinter\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"minter\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"limit\",\"type\":\"uint256\"}],\"name\":\"updateMinter\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"interface/IUSDC.sol\":\"IUSDC\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"interface/IUSDC.sol\":{\"keccak256\":\"0xcfa9859f2dab5d38aceaf80467f20894b907009386b07f26935ae1a17de5cb0d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6868e6959ae0f2f52506a79195b086377b3beb5be133eb301dd612a976b7907d\",\"dweb:/ipfs/QmTKXvVgdfH42xevAFZWbuSAZdk9cS6xCymAbxFwQweeRp\"]}},\"version\":1}",
+					"metadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"minter\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"limit\",\"type\":\"uint256\"}],\"name\":\"UpdateMinter\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"minter\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"limit\",\"type\":\"uint256\"}],\"name\":\"updateMinter\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"interface/IUSDC.sol\":\"IUSDC\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"interface/IUSDC.sol\":{\"keccak256\":\"0xdd236bcad9202f71c0e533b3cd56859cb50845027a3b866b11cd55179076fb58\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8de6d29310668528625208ecf593e46dd57981cd44e0f287787a4a93351eb649\",\"dweb:/ipfs/QmWwwBE9cvtbajTuVvBgdvHs6VmCALJ9XpSxBJfmrnNzyF\"]}},\"version\":1}",
 					"storageLayout": {
 						"storage": [],
 						"types": null
@@ -175,10 +162,10 @@
 					"absolutePath": "interface/IUSDC.sol",
 					"exportedSymbols": {
 						"IUSDC": [
-							36
+							32
 						]
 					},
-					"id": 37,
+					"id": 33,
 					"license": "MIT",
 					"nodeType": "SourceUnit",
 					"nodes": [
@@ -200,9 +187,9 @@
 							"contractDependencies": [],
 							"contractKind": "interface",
 							"fullyImplemented": false,
-							"id": 36,
+							"id": 32,
 							"linearizedBaseContracts": [
-								36
+								32
 							],
 							"name": "IUSDC",
 							"nameLocation": "68:5:0",
@@ -270,7 +257,7 @@
 									"name": "Balance",
 									"nameLocation": "87:7:0",
 									"nodeType": "StructDefinition",
-									"scope": 36,
+									"scope": 32,
 									"src": "80:69:0",
 									"visibility": "public"
 								},
@@ -349,7 +336,7 @@
 								},
 								{
 									"functionSelector": "b8f883f9",
-									"id": 21,
+									"id": 19,
 									"implemented": false,
 									"kind": "function",
 									"modifiers": [],
@@ -367,7 +354,7 @@
 												"name": "minter",
 												"nameLocation": "249:6:0",
 												"nodeType": "VariableDeclaration",
-												"scope": 21,
+												"scope": 19,
 												"src": "241:14:0",
 												"stateVariable": false,
 												"storageLocation": "default",
@@ -395,7 +382,7 @@
 												"name": "limit",
 												"nameLocation": "265:5:0",
 												"nodeType": "VariableDeclaration",
-												"scope": 21,
+												"scope": 19,
 												"src": "257:13:0",
 												"stateVariable": false,
 												"storageLocation": "default",
@@ -419,53 +406,25 @@
 										"src": "240:31:0"
 									},
 									"returnParameters": {
-										"id": 20,
+										"id": 18,
 										"nodeType": "ParameterList",
-										"parameters": [
-											{
-												"constant": false,
-												"id": 19,
-												"mutability": "mutable",
-												"name": "",
-												"nameLocation": "-1:-1:-1",
-												"nodeType": "VariableDeclaration",
-												"scope": 21,
-												"src": "290:4:0",
-												"stateVariable": false,
-												"storageLocation": "default",
-												"typeDescriptions": {
-													"typeIdentifier": "t_bool",
-													"typeString": "bool"
-												},
-												"typeName": {
-													"id": 18,
-													"name": "bool",
-													"nodeType": "ElementaryTypeName",
-													"src": "290:4:0",
-													"typeDescriptions": {
-														"typeIdentifier": "t_bool",
-														"typeString": "bool"
-													}
-												},
-												"visibility": "internal"
-											}
-										],
-										"src": "289:6:0"
+										"parameters": [],
+										"src": "280:0:0"
 									},
-									"scope": 36,
-									"src": "219:77:0",
+									"scope": 32,
+									"src": "219:62:0",
 									"stateMutability": "nonpayable",
 									"virtual": false,
 									"visibility": "external"
 								},
 								{
-									"functionSelector": "a0712d68",
-									"id": 28,
+									"functionSelector": "40c10f19",
+									"id": 26,
 									"implemented": false,
 									"kind": "function",
 									"modifiers": [],
 									"name": "mint",
-									"nameLocation": "311:4:0",
+									"nameLocation": "296:4:0",
 									"nodeType": "FunctionDefinition",
 									"parameters": {
 										"id": 24,
@@ -473,13 +432,41 @@
 										"parameters": [
 											{
 												"constant": false,
+												"id": 21,
+												"mutability": "mutable",
+												"name": "to",
+												"nameLocation": "309:2:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 26,
+												"src": "301:10:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 20,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "301:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
 												"id": 23,
 												"mutability": "mutable",
 												"name": "amount",
-												"nameLocation": "324:6:0",
+												"nameLocation": "321:6:0",
 												"nodeType": "VariableDeclaration",
-												"scope": 28,
-												"src": "316:14:0",
+												"scope": 26,
+												"src": "313:14:0",
 												"stateVariable": false,
 												"storageLocation": "default",
 												"typeDescriptions": {
@@ -490,7 +477,7 @@
 													"id": 22,
 													"name": "uint256",
 													"nodeType": "ElementaryTypeName",
-													"src": "316:7:0",
+													"src": "313:7:0",
 													"typeDescriptions": {
 														"typeIdentifier": "t_uint256",
 														"typeString": "uint256"
@@ -499,70 +486,42 @@
 												"visibility": "internal"
 											}
 										],
-										"src": "315:16:0"
+										"src": "300:28:0"
 									},
 									"returnParameters": {
-										"id": 27,
+										"id": 25,
 										"nodeType": "ParameterList",
-										"parameters": [
-											{
-												"constant": false,
-												"id": 26,
-												"mutability": "mutable",
-												"name": "",
-												"nameLocation": "-1:-1:-1",
-												"nodeType": "VariableDeclaration",
-												"scope": 28,
-												"src": "350:4:0",
-												"stateVariable": false,
-												"storageLocation": "default",
-												"typeDescriptions": {
-													"typeIdentifier": "t_bool",
-													"typeString": "bool"
-												},
-												"typeName": {
-													"id": 25,
-													"name": "bool",
-													"nodeType": "ElementaryTypeName",
-													"src": "350:4:0",
-													"typeDescriptions": {
-														"typeIdentifier": "t_bool",
-														"typeString": "bool"
-													}
-												},
-												"visibility": "internal"
-											}
-										],
-										"src": "349:6:0"
+										"parameters": [],
+										"src": "337:0:0"
 									},
-									"scope": 36,
-									"src": "302:54:0",
+									"scope": 32,
+									"src": "287:51:0",
 									"stateMutability": "nonpayable",
 									"virtual": false,
 									"visibility": "external"
 								},
 								{
 									"functionSelector": "42966c68",
-									"id": 35,
+									"id": 31,
 									"implemented": false,
 									"kind": "function",
 									"modifiers": [],
 									"name": "burn",
-									"nameLocation": "371:4:0",
+									"nameLocation": "353:4:0",
 									"nodeType": "FunctionDefinition",
 									"parameters": {
-										"id": 31,
+										"id": 29,
 										"nodeType": "ParameterList",
 										"parameters": [
 											{
 												"constant": false,
-												"id": 30,
+												"id": 28,
 												"mutability": "mutable",
 												"name": "amount",
-												"nameLocation": "384:6:0",
+												"nameLocation": "366:6:0",
 												"nodeType": "VariableDeclaration",
-												"scope": 35,
-												"src": "376:14:0",
+												"scope": 31,
+												"src": "358:14:0",
 												"stateVariable": false,
 												"storageLocation": "default",
 												"typeDescriptions": {
@@ -570,10 +529,10 @@
 													"typeString": "uint256"
 												},
 												"typeName": {
-													"id": 29,
+													"id": 27,
 													"name": "uint256",
 													"nodeType": "ElementaryTypeName",
-													"src": "376:7:0",
+													"src": "358:7:0",
 													"typeDescriptions": {
 														"typeIdentifier": "t_uint256",
 														"typeString": "uint256"
@@ -582,55 +541,27 @@
 												"visibility": "internal"
 											}
 										],
-										"src": "375:16:0"
+										"src": "357:16:0"
 									},
 									"returnParameters": {
-										"id": 34,
+										"id": 30,
 										"nodeType": "ParameterList",
-										"parameters": [
-											{
-												"constant": false,
-												"id": 33,
-												"mutability": "mutable",
-												"name": "",
-												"nameLocation": "-1:-1:-1",
-												"nodeType": "VariableDeclaration",
-												"scope": 35,
-												"src": "410:4:0",
-												"stateVariable": false,
-												"storageLocation": "default",
-												"typeDescriptions": {
-													"typeIdentifier": "t_bool",
-													"typeString": "bool"
-												},
-												"typeName": {
-													"id": 32,
-													"name": "bool",
-													"nodeType": "ElementaryTypeName",
-													"src": "410:4:0",
-													"typeDescriptions": {
-														"typeIdentifier": "t_bool",
-														"typeString": "bool"
-													}
-												},
-												"visibility": "internal"
-											}
-										],
-										"src": "409:6:0"
+										"parameters": [],
+										"src": "382:0:0"
 									},
-									"scope": 36,
-									"src": "362:54:0",
+									"scope": 32,
+									"src": "344:39:0",
 									"stateMutability": "nonpayable",
 									"virtual": false,
 									"visibility": "external"
 								}
 							],
-							"scope": 37,
-							"src": "58:360:0",
+							"scope": 33,
+							"src": "58:327:0",
 							"usedErrors": []
 						}
 					],
-					"src": "32:387:0"
+					"src": "32:354:0"
 				},
 				"id": 0
 			}

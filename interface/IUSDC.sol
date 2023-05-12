@@ -9,9 +9,9 @@ interface IUSDC {
 
     event UpdateMinter(address indexed minter, uint256 limit);
 
-    function updateMinter(address minter, uint256 limit) external returns (bool);
+    function updateMinter(address minter, uint256 limit) external;
 
-    function mint(uint256 amount) external returns (bool);
+    function mint(address to, uint256 amount) external;
 
-    function burn(uint256 amount) external returns (bool);
+    function burn(uint256 amount) external;
 }

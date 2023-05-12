@@ -33,18 +33,17 @@
 					}
 				],
 				"name": "burn",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
 					{
 						"internalType": "uint256",
 						"name": "amount",
@@ -52,13 +51,7 @@
 					}
 				],
 				"name": "mint",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -76,13 +69,7 @@
 					}
 				],
 				"name": "updateMinter",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
@@ -115,11 +102,11 @@
 	},
 	"sources": {
 		"interface/IUSDC.sol": {
-			"keccak256": "0xcfa9859f2dab5d38aceaf80467f20894b907009386b07f26935ae1a17de5cb0d",
+			"keccak256": "0xdd236bcad9202f71c0e533b3cd56859cb50845027a3b866b11cd55179076fb58",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6868e6959ae0f2f52506a79195b086377b3beb5be133eb301dd612a976b7907d",
-				"dweb:/ipfs/QmTKXvVgdfH42xevAFZWbuSAZdk9cS6xCymAbxFwQweeRp"
+				"bzz-raw://8de6d29310668528625208ecf593e46dd57981cd44e0f287787a4a93351eb649",
+				"dweb:/ipfs/QmWwwBE9cvtbajTuVvBgdvHs6VmCALJ9XpSxBJfmrnNzyF"
 			]
 		}
 	},

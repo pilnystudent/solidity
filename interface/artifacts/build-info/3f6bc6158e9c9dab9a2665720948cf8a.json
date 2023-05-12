@@ -1,5 +1,5 @@
 {
-	"id": "c6075dc87315e85e95dcb95e0e42d6d2",
+	"id": "3f6bc6158e9c9dab9a2665720948cf8a",
 	"_format": "hh-sol-build-info-1",
 	"solcVersion": "0.8.18",
 	"solcLongVersion": "0.8.18+commit.87f61d96",
@@ -7,7 +7,7 @@
 		"language": "Solidity",
 		"sources": {
 			"interface/IWETH.sol": {
-				"content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.17;\n\ninterface IWETH {\n    function deposit() external payable returns (bool);\n\n    function withdraw(uint256 amount) external returns (bool);\n}\n"
+				"content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.17;\n\ninterface IWETH {\n    function deposit() external payable;\n\n    function withdraw(uint256 amount) external;\n}\n"
 			}
 		},
 		"settings": {
@@ -45,13 +45,7 @@
 						{
 							"inputs": [],
 							"name": "deposit",
-							"outputs": [
-								{
-									"internalType": "bool",
-									"name": "",
-									"type": "bool"
-								}
-							],
+							"outputs": [],
 							"stateMutability": "payable",
 							"type": "function"
 						},
@@ -64,13 +58,7 @@
 								}
 							],
 							"name": "withdraw",
-							"outputs": [
-								{
-									"internalType": "bool",
-									"name": "",
-									"type": "bool"
-								}
-							],
+							"outputs": [],
 							"stateMutability": "nonpayable",
 							"type": "function"
 						}
@@ -106,7 +94,7 @@
 							"withdraw(uint256)": "2e1a7d4d"
 						}
 					},
-					"metadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"deposit\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"interface/IWETH.sol\":\"IWETH\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"interface/IWETH.sol\":{\"keccak256\":\"0x89b481c5befb85d670d10f703237cd929ad55a6df3a206fe59e44f4ea86a79b1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://193b64326d6b1bfc94422c6f75e8de4a68ce82adff13fa86cee571133cb8fb54\",\"dweb:/ipfs/QmNcRFF8YybjSXRsGEoZoRywECDB1g77Sd7qQUvTBUpiBV\"]}},\"version\":1}",
+					"metadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"interface/IWETH.sol\":\"IWETH\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"interface/IWETH.sol\":{\"keccak256\":\"0x2e8a276743d2e36235a3457aca95ac3c6e36dec5bb628e6c7cdfeae6061a89bf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5172c224002b26acfa437a3eb1b70fe0fdbc8e1755372b7362a554407486c205\",\"dweb:/ipfs/QmZNevQyaMqgoU54PZXQZ9tcSrmCRTqtLKGZ3sNwvdwwcW\"]}},\"version\":1}",
 					"storageLayout": {
 						"storage": [],
 						"types": null
@@ -125,10 +113,10 @@
 					"absolutePath": "interface/IWETH.sol",
 					"exportedSymbols": {
 						"IWETH": [
-							14
+							10
 						]
 					},
-					"id": 15,
+					"id": 11,
 					"license": "MIT",
 					"nodeType": "SourceUnit",
 					"nodes": [
@@ -150,9 +138,9 @@
 							"contractDependencies": [],
 							"contractKind": "interface",
 							"fullyImplemented": false,
-							"id": 14,
+							"id": 10,
 							"linearizedBaseContracts": [
-								14
+								10
 							],
 							"name": "IWETH",
 							"nameLocation": "68:5:0",
@@ -160,7 +148,7 @@
 							"nodes": [
 								{
 									"functionSelector": "d0e30db0",
-									"id": 6,
+									"id": 4,
 									"implemented": false,
 									"kind": "function",
 									"modifiers": [],
@@ -174,67 +162,39 @@
 										"src": "96:2:0"
 									},
 									"returnParameters": {
-										"id": 5,
+										"id": 3,
 										"nodeType": "ParameterList",
-										"parameters": [
-											{
-												"constant": false,
-												"id": 4,
-												"mutability": "mutable",
-												"name": "",
-												"nameLocation": "-1:-1:-1",
-												"nodeType": "VariableDeclaration",
-												"scope": 6,
-												"src": "125:4:0",
-												"stateVariable": false,
-												"storageLocation": "default",
-												"typeDescriptions": {
-													"typeIdentifier": "t_bool",
-													"typeString": "bool"
-												},
-												"typeName": {
-													"id": 3,
-													"name": "bool",
-													"nodeType": "ElementaryTypeName",
-													"src": "125:4:0",
-													"typeDescriptions": {
-														"typeIdentifier": "t_bool",
-														"typeString": "bool"
-													}
-												},
-												"visibility": "internal"
-											}
-										],
-										"src": "124:6:0"
+										"parameters": [],
+										"src": "115:0:0"
 									},
-									"scope": 14,
-									"src": "80:51:0",
+									"scope": 10,
+									"src": "80:36:0",
 									"stateMutability": "payable",
 									"virtual": false,
 									"visibility": "external"
 								},
 								{
 									"functionSelector": "2e1a7d4d",
-									"id": 13,
+									"id": 9,
 									"implemented": false,
 									"kind": "function",
 									"modifiers": [],
 									"name": "withdraw",
-									"nameLocation": "146:8:0",
+									"nameLocation": "131:8:0",
 									"nodeType": "FunctionDefinition",
 									"parameters": {
-										"id": 9,
+										"id": 7,
 										"nodeType": "ParameterList",
 										"parameters": [
 											{
 												"constant": false,
-												"id": 8,
+												"id": 6,
 												"mutability": "mutable",
 												"name": "amount",
-												"nameLocation": "163:6:0",
+												"nameLocation": "148:6:0",
 												"nodeType": "VariableDeclaration",
-												"scope": 13,
-												"src": "155:14:0",
+												"scope": 9,
+												"src": "140:14:0",
 												"stateVariable": false,
 												"storageLocation": "default",
 												"typeDescriptions": {
@@ -242,10 +202,10 @@
 													"typeString": "uint256"
 												},
 												"typeName": {
-													"id": 7,
+													"id": 5,
 													"name": "uint256",
 													"nodeType": "ElementaryTypeName",
-													"src": "155:7:0",
+													"src": "140:7:0",
 													"typeDescriptions": {
 														"typeIdentifier": "t_uint256",
 														"typeString": "uint256"
@@ -254,55 +214,27 @@
 												"visibility": "internal"
 											}
 										],
-										"src": "154:16:0"
+										"src": "139:16:0"
 									},
 									"returnParameters": {
-										"id": 12,
+										"id": 8,
 										"nodeType": "ParameterList",
-										"parameters": [
-											{
-												"constant": false,
-												"id": 11,
-												"mutability": "mutable",
-												"name": "",
-												"nameLocation": "-1:-1:-1",
-												"nodeType": "VariableDeclaration",
-												"scope": 13,
-												"src": "189:4:0",
-												"stateVariable": false,
-												"storageLocation": "default",
-												"typeDescriptions": {
-													"typeIdentifier": "t_bool",
-													"typeString": "bool"
-												},
-												"typeName": {
-													"id": 10,
-													"name": "bool",
-													"nodeType": "ElementaryTypeName",
-													"src": "189:4:0",
-													"typeDescriptions": {
-														"typeIdentifier": "t_bool",
-														"typeString": "bool"
-													}
-												},
-												"visibility": "internal"
-											}
-										],
-										"src": "188:6:0"
+										"parameters": [],
+										"src": "164:0:0"
 									},
-									"scope": 14,
-									"src": "137:58:0",
+									"scope": 10,
+									"src": "122:43:0",
 									"stateMutability": "nonpayable",
 									"virtual": false,
 									"visibility": "external"
 								}
 							],
-							"scope": 15,
-							"src": "58:139:0",
+							"scope": 11,
+							"src": "58:109:0",
 							"usedErrors": []
 						}
 					],
-					"src": "32:166:0"
+					"src": "32:136:0"
 				},
 				"id": 0
 			}

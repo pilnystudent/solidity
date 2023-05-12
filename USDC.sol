@@ -6,50 +6,36 @@ import {Ownable} from "./access/Ownable.sol";
 import {IUSDC} from "./interface/IUSDC.sol";
 
 contract USDC is ERC20, Ownable, IUSDC {
+    /*////////////////////////////////////////////////////////////
+                            STORAGE
+    ////////////////////////////////////////////////////////////*/
+
+    mapping(address => Balance) public mintBalance;
 
     /*////////////////////////////////////////////////////////////
                             CONSTRUCTOR
     ////////////////////////////////////////////////////////////*/
 
-    constructor() ERC20("USD Coin", "USDC", 18) {}
+    constructor() ERC20("USD Coin", "USDC") {}
 
     /*////////////////////////////////////////////////////////////
-                            STORAGE
+                            LOGIC PUBLIC
     ////////////////////////////////////////////////////////////*/
 
-    mapping(address => Balance) public minterBalance;
-
-    /*////////////////////////////////////////////////////////////
-                            LOGIC
-    ////////////////////////////////////////////////////////////*/
-
-    function updateMinter(address minter, uint256 limit) external onlyOwner returns (bool) {
-        minterBalance[minter].limit = limit;
+    function updateMinter(address minter, uint256 limit) external onlyOwner {
+        mintBalance[minter].limit = limit;
         emit UpdateMinter(minter, limit);
-        return true;
     }
 
-    function mint(uint256 amount) external returns (bool) {
-        require(minterBalance[msg.sender].limit >= minterBalance[msg.sender].minted + amount, "USDC: insufficient mint limit");
-        require(totalSupply + amount >= amount, "USDC: total supply overflow");
-        unchecked {
-            minterBalance[msg.sender].minted += amount;
-            balanceOf[msg.sender] += amount;
-            totalSupply += amount;
-        }
-        emit Transfer(address(0), msg.sender, amount);
-        return true;
+    function mint(address to, uint256 amount) external {
+        Balance storage balance = mintBalance[msg.sender];
+        balance.minted += amount;
+        require(balance.limit >= balance.minted);
+        _mint(to, amount);
     }
 
-    function burn(uint256 amount) external returns (bool) {
-        require(minterBalance[msg.sender].minted >= amount, "USDC: insufficient burn limit");
-        require(balanceOf[msg.sender] >= amount, "USDC: insufficient balance");
-        unchecked {
-            minterBalance[msg.sender].minted -= amount;
-            balanceOf[msg.sender] -= amount;
-            totalSupply -= amount;
-        }
-        emit Transfer(msg.sender, address(0), amount);
-        return true;
+    function burn(uint256 amount) external {
+        mintBalance[msg.sender].minted -= amount;
+        _burn(msg.sender, amount);
     }
 }

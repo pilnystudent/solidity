@@ -168,13 +168,7 @@
 					}
 				],
 				"name": "burn",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -194,19 +188,18 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
 						"internalType": "uint256",
 						"name": "amount",
 						"type": "uint256"
 					}
 				],
 				"name": "mint",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -218,7 +211,7 @@
 						"type": "address"
 					}
 				],
-				"name": "minterBalance",
+				"name": "mintBalance",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -290,7 +283,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "recipient",
+						"name": "to",
 						"type": "address"
 					},
 					{
@@ -314,12 +307,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "sender",
+						"name": "from",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "recipient",
+						"name": "to",
 						"type": "address"
 					},
 					{
@@ -353,13 +346,7 @@
 					}
 				],
 				"name": "updateMinter",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -390,6 +377,12 @@
 			"methods": {
 				"approve(address,uint256)": {
 					"details": "Sets `amount` as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event."
+				},
+				"transfer(address,uint256)": {
+					"details": "Moves `amount` tokens from the caller's account to `to`. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "Moves `amount` tokens from `from` to `to` using the allowance mechanism. `amount` is then deducted from the caller's allowance. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
 				}
 			},
 			"version": 1
@@ -433,11 +426,11 @@
 			]
 		},
 		"USDC.sol": {
-			"keccak256": "0xb03ccfb96cb882d736a2d7030735423ecc27c91f62d99269f1735b761ecac7b7",
+			"keccak256": "0xb126c7d7fc64e4a5676187eb915b58da3748f0ee02c0593b2d0fc13776d64899",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://394311dfc4bae7c8702aef631145967fbefe780e3fbe6662d7281a78918d0ae5",
-				"dweb:/ipfs/QmZPajRfGRHFtck3grdmj18gPM5YtsQmHoKM7yrJpb1GVV"
+				"bzz-raw://ce41791015854e92b365f2983f4ec47920ded1ae3acdd14c861fe3dddf84a557",
+				"dweb:/ipfs/QmeBmFTVDJ4qeLYwQNesk9ZqDAUZnoBYmAxkeb2j6KupGu"
 			]
 		},
 		"access/Ownable.sol": {
@@ -449,19 +442,19 @@
 			]
 		},
 		"interface/IUSDC.sol": {
-			"keccak256": "0xcfa9859f2dab5d38aceaf80467f20894b907009386b07f26935ae1a17de5cb0d",
+			"keccak256": "0xdd236bcad9202f71c0e533b3cd56859cb50845027a3b866b11cd55179076fb58",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6868e6959ae0f2f52506a79195b086377b3beb5be133eb301dd612a976b7907d",
-				"dweb:/ipfs/QmTKXvVgdfH42xevAFZWbuSAZdk9cS6xCymAbxFwQweeRp"
+				"bzz-raw://8de6d29310668528625208ecf593e46dd57981cd44e0f287787a4a93351eb649",
+				"dweb:/ipfs/QmWwwBE9cvtbajTuVvBgdvHs6VmCALJ9XpSxBJfmrnNzyF"
 			]
 		},
 		"token/ERC20.sol": {
-			"keccak256": "0x9e63819282a7f3d50bb281f3d4abd8c056e5ad0add63c5afd64abdfb8bce9778",
+			"keccak256": "0x399bad09d325a96970f36ecb398359ff5a45f3ec71508b718fd42fff7a707560",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://69e4012151a0113bc18066e9bc7c147268d67aaada6e4efdcfda466d820b6f48",
-				"dweb:/ipfs/QmV2YkLdKfBXda81VsUJb5EMHUcpVM3iuWyWrHYJBNCGKp"
+				"bzz-raw://0016c396eb377fa3a006674924de5b7bc923254543f2b1c62ab494d44b7ea195",
+				"dweb:/ipfs/QmPjE36YwStJHZnPxC5uzdGPCbkmjKaBwyckZRsKeJn5bh"
 			]
 		}
 	},

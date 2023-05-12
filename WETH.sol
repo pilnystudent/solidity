@@ -5,34 +5,22 @@ import {ERC20} from "./token/ERC20.sol";
 import {IWETH} from "./interface/IWETH.sol";
 
 contract WETH is ERC20, IWETH {
-
     /*////////////////////////////////////////////////////////////
                             CONSTRUCTOR
     ////////////////////////////////////////////////////////////*/
 
-    constructor() ERC20("Wrapped Ethereum", "WETH", 18) {}
+    constructor() ERC20("Wrapped Ethereum", "WETH") {}
 
     /*////////////////////////////////////////////////////////////
-                            LOGIC
+                            LOGIC PUBLIC
     ////////////////////////////////////////////////////////////*/
 
-    function deposit() external payable returns (bool) {
-        unchecked {
-            balanceOf[msg.sender] += msg.value;
-            totalSupply += msg.value;
-        }
-        emit Transfer(address(0), msg.sender, msg.value);
-        return true;
+    function deposit() external payable  {
+        _mint(msg.sender, msg.value);
     }
 
-    function withdraw(uint256 amount) external returns (bool) {
-        require(balanceOf[msg.sender] >= amount, "WETH: insufficient balance");
-        unchecked {
-            balanceOf[msg.sender] -= amount;
-            totalSupply -= amount;
-        }
+    function withdraw(uint256 amount) external  {
+        _burn(msg.sender, amount);
         payable(msg.sender).transfer(amount);
-        emit Transfer(msg.sender, address(0), amount);
-        return true;
     }
 }
