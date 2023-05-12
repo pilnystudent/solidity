@@ -26,7 +26,7 @@ contract WETH is ERC20, IWETH {
     }
 
     function withdraw(uint256 amount) external returns (bool) {
-        require(balanceOf[msg.sender] >= amount, "insufficient balance");
+        require(balanceOf[msg.sender] >= amount, "WETH: insufficient balance");
         unchecked {
             balanceOf[msg.sender] -= amount;
             totalSupply -= amount;

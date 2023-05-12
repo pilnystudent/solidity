@@ -321,11 +321,11 @@
 			]
 		},
 		"WETH.sol": {
-			"keccak256": "0xe228edf62f405a498f249334fc1695e78202830c21490ed8709615df2811ba17",
+			"keccak256": "0xb03acf25c0f19762bd9fdf1a9400370f9b9f4541bf6ca92f9056d7d07494de9d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b90fa9de270cc9aef80a2961374c6de6373c7f374e361c83d0875c3f3bd2e057",
-				"dweb:/ipfs/QmUp7mPZVmSZRxibBnbRwnDXTCvnikverGohsFUDjPHtTS"
+				"bzz-raw://8abe1112751c8259c34d048ce54d0e89e5ff9f3a8e66883defb317d5c50d3a9e",
+				"dweb:/ipfs/QmWJ6bAsJu4HBsU1AihTCRvDQ6pL3FPCFVsyLXopVR2x7H"
 			]
 		},
 		"interface/IWETH.sol": {
