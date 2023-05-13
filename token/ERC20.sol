@@ -46,48 +46,22 @@ abstract contract ERC20 is IERC20, IERC20Metadata {
         emit Transfer(from, address(0), amount);
     }
 
-    function _transfer(
-        address from,
-        address to,
-        uint256 amount
-    ) internal {
-        balanceOf[from] -= amount;
-        unchecked {
-            balanceOf[to] += amount;
-        }
-        emit Transfer(from, to, amount);
-    }
-
-    function _approve(
-        address owner,
-        address spender,
-        uint256 amount
-    ) internal {
-        allowance[owner][spender] = amount;
-        emit Approval(owner, spender, amount);
-    }
-
-    function _spendAllowance(
-        address owner,
-        address spender,
-        uint256 amount
-    ) internal {
-        uint256 allowanceLeft = allowance[owner][spender] - amount;
-        allowance[owner][spender] = allowanceLeft;
-        emit Approval(owner, spender, allowanceLeft);
-    }
-
     /*////////////////////////////////////////////////////////////
                             LOGIC PUBLIC
     ////////////////////////////////////////////////////////////*/
 
     function approve(address spender, uint256 amount) external returns (bool) {
-        _approve(msg.sender, spender, amount);
+        allowance[msg.sender][spender] = amount;
+        emit Approval(msg.sender, spender, amount);
         return true;
     }
 
     function transfer(address to, uint256 amount) external returns (bool) {
-        _transfer(msg.sender, to, amount);
+        balanceOf[msg.sender] -= amount;
+        unchecked {
+            balanceOf[to] += amount;
+        }
+        emit Transfer(msg.sender, to, amount);
         return true;
     }
 
@@ -96,8 +70,12 @@ abstract contract ERC20 is IERC20, IERC20Metadata {
         address to,
         uint256 amount
     ) external returns (bool) {
-        _spendAllowance(from, msg.sender, amount);
-        _transfer(from, to, amount);
+        allowance[from][msg.sender] -= amount;
+        balanceOf[from] -= amount;
+        unchecked {
+            balanceOf[to] += amount;
+        }
+        emit Transfer(from, to, amount);
         return true;
     }
 }
