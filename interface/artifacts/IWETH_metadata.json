@@ -54,11 +54,11 @@
 	},
 	"sources": {
 		"interface/IWETH.sol": {
-			"keccak256": "0x2e8a276743d2e36235a3457aca95ac3c6e36dec5bb628e6c7cdfeae6061a89bf",
+			"keccak256": "0xab8c8ab32958c1c049384cfb179e304e48fc112161b86551b222b5f3f9163118",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5172c224002b26acfa437a3eb1b70fe0fdbc8e1755372b7362a554407486c205",
-				"dweb:/ipfs/QmZNevQyaMqgoU54PZXQZ9tcSrmCRTqtLKGZ3sNwvdwwcW"
+				"bzz-raw://b6ac264e2d0b590fac78608623d1797bc03a2622a1754d9c57c4c61f31697586",
+				"dweb:/ipfs/QmTrmAspUpsUEKJP3xfP5qYKSEpzqK5wc6vnMemuKUWycC"
 			]
 		}
 	},
