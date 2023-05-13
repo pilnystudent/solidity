@@ -353,7 +353,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"NFT.sol": "MyNFT"
+			"NFT.sol": "NFT"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -408,11 +408,11 @@
 			]
 		},
 		"NFT.sol": {
-			"keccak256": "0xc84dd029f44a25bffb20d72a6f188d0f20d0bb7813ed8cebef045efacdf9abbe",
+			"keccak256": "0x19d5997b3b04e6b0d1d8b9a678ea3c2e4ad9a7ae91c910a9ef2c8a8807c880dd",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0d026a0b8f5f50a368eeada8d107a1cb6063106e5aec01ebdf5a9cd5342a0f67",
-				"dweb:/ipfs/QmRLiRECnjmG3SyoKe8SYtj4dZTAxu96jMxXZwkriYz3KL"
+				"bzz-raw://0b610d5a3b8d3036ce626dcc8e823f8dd050054427e90940ea3b39ca126c3db5",
+				"dweb:/ipfs/QmYFp1AW4NH4U8ozf5DKhciew2CZt12kL44ok8SpGnRSjh"
 			]
 		},
 		"token/ERC721.sol": {

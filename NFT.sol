@@ -3,7 +3,7 @@ pragma solidity ^0.8.17;
 
 import {ERC721} from "./token/ERC721.sol";
 
-contract MyNFT is ERC721 {
+contract NFT is ERC721 {
     function mint(address to, uint256 id) external {
         _mint(to, id);
     }

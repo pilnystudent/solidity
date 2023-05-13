@@ -5,7 +5,7 @@ import {IERC165} from "@openzeppelin/contracts/interfaces/IERC165.sol";
 import {IERC721} from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import {IERC721Receiver} from "@openzeppelin/contracts/interfaces/IERC721Receiver.sol";
 
-contract ERC721 is IERC721 {
+abstract contract ERC721 is IERC721 {
     mapping(uint256 => address) internal _ownerOf;
     mapping(address => uint256) internal _balanceOf;
     mapping(uint256 => address) internal _approvals;
