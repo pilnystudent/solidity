@@ -308,11 +308,11 @@
 			]
 		},
 		"CREDIT.sol": {
-			"keccak256": "0x653d020278e4400338d790228403c1b1f36d98773b84f0c75b36be3a92b8dabd",
+			"keccak256": "0x59b2fc2279edf144ddf4e32ed9d6f05ba4babcc2aeee7ad05733a61da3df9957",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c8b232735eea246519bae7eb7dad1e40782010a13163be946e327c1236c9282b",
-				"dweb:/ipfs/Qmf3prjZKfxNWZGYtdDJzPCjj8Hces2u4jREDSPErWtA4g"
+				"bzz-raw://6ca4ac898213f8bc4848f9783ea97810238ce0dd9a46e5a5bc6990c73af61bee",
+				"dweb:/ipfs/QmbCR6AuMxW4ap3nBzPky48wefM2gSh7g4FajgHiBLs8LC"
 			]
 		},
 		"token/ERC20.sol": {

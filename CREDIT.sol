@@ -8,7 +8,7 @@ contract CREDIT is ERC20 {
                             CONSTRUCTOR
     ////////////////////////////////////////////////////////////*/
 
-    constructor() ERC20("Credit", "CREDI") {
+    constructor() ERC20("Credit", "CREDIT") {
         _mint(msg.sender, 1000000000 * 10**decimals);
     }
 
