@@ -107,11 +107,11 @@
 			]
 		},
 		"tests/WETH_test.sol": {
-			"keccak256": "0x6d664ddba4c792069d7308c01ca87d607c6ef8d8af276a299779348961ec996d",
+			"keccak256": "0xa8b4e4d17002fb862e173ac9728709960227a623822a09a1cf3b3481aaeb600f",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://5d43bee04131603798cdb062e8722291b3e8a700e44ccde2bd29991cc9fb6d18",
-				"dweb:/ipfs/QmdfffDTxBeGujoTus3uwH2h2BqHvwT7GYp1u9pHMacw4E"
+				"bzz-raw://be02620c4bf9d9f7fe9a80222f9b73b88a379901359e62f1f9dc34ec251d1efa",
+				"dweb:/ipfs/Qmc86MMYJUJ1YHVxiYvJymTWNffj2tSHA5aaqpW1sSwc51"
 			]
 		},
 		"token/ERC20.sol": {
