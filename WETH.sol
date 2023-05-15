@@ -5,9 +5,8 @@ import {ERC20} from "./token/ERC20.sol";
 import {IWETH} from "./interface/IWETH.sol";
 
 /*
- * @title WETH
- * @notice ERC20
- * @notice WETH replica
+ * ERC20
+ * WETH replica
  */
 
 contract WETH is ERC20, IWETH {

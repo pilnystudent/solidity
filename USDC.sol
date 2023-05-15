@@ -6,12 +6,11 @@ import {Ownable} from "./access/Ownable.sol";
 import {IUSDC} from "./interface/IUSDC.sol";
 
 /*
- * @title USDC
- * @notice ERC20
- * @notice USDC replica
- * @notice Owner can set minter limit
- * @notice Minter can mint up to limit
- * @notice Minter can burn up to his minted amount
+ * ERC20
+ * USDC replica
+ * Owner can set minter limit
+ * Minter can mint up to limit
+ * Minter can burn up to his minted amount
  */
 
 contract USDC is ERC20, Ownable, IUSDC {

@@ -4,10 +4,9 @@ pragma solidity ^0.8.17;
 import {ERC20} from "./token/ERC20.sol";
 
 /*
- * @title CREDIT
- * @notice ERC20
- * @notice anybody can mint
- * @notice 1 CREDIT = 1 second
+ * ERC20
+ * public unowned mint
+ * 1 CREDIT = 1 second
  */
 
 contract CREDIT is ERC20 {
