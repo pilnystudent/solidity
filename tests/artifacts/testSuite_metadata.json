@@ -98,14 +98,6 @@
 				"dweb:/ipfs/QmTrmAspUpsUEKJP3xfP5qYKSEpzqK5wc6vnMemuKUWycC"
 			]
 		},
-		"remix_accounts.sol": {
-			"keccak256": "0x722e8fd271de98c2d980bda8e3d011551d9641355216b1029084b455c4c2a662",
-			"license": "GPL-3.0",
-			"urls": [
-				"bzz-raw://8e57585c7061065613c796706efdae0c79a416bde447ccbe4ffaf969aeb7423e",
-				"dweb:/ipfs/QmdQCAgvob9suV3UwSR2rRetyU9fafTtEi2sDv9oRmRSLo"
-			]
-		},
 		"remix_tests.sol": {
 			"keccak256": "0xe2783cdc204cba8c72494119339f1d90f9022b15d6c718c668b7f097d8e29787",
 			"license": "GPL-3.0",
@@ -115,11 +107,11 @@
 			]
 		},
 		"tests/WETH_test.sol": {
-			"keccak256": "0x95326f387f5e17e14584e4865685c54b4c3b33ff984cc17d1ca3eea1413f3a45",
+			"keccak256": "0x6d664ddba4c792069d7308c01ca87d607c6ef8d8af276a299779348961ec996d",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://51393482ba99b04391b5b96f4332e8f4a773bf41821426e9667c1f5e08ff312c",
-				"dweb:/ipfs/QmUpHfzjzaRaAYbStNJAbXu7g8NAMkHsPTMtm9Q1rN6SVS"
+				"bzz-raw://5d43bee04131603798cdb062e8722291b3e8a700e44ccde2bd29991cc9fb6d18",
+				"dweb:/ipfs/QmdfffDTxBeGujoTus3uwH2h2BqHvwT7GYp1u9pHMacw4E"
 			]
 		},
 		"token/ERC20.sol": {
