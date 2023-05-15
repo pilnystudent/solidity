@@ -327,7 +327,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"token/ERC721.sol": "ERC721"
+			"token/devERC721.sol": "ERC721"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -381,7 +381,7 @@
 				"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
 			]
 		},
-		"token/ERC721.sol": {
+		"token/devERC721.sol": {
 			"keccak256": "0x05957f75aacf3cbc902325ee4eac8978df40ece1d97c1f944bf76aef1a20d041",
 			"license": "MIT",
 			"urls": [

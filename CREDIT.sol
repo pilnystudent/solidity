@@ -3,16 +3,26 @@ pragma solidity ^0.8.17;
 
 import {ERC20} from "./token/ERC20.sol";
 
+/*
+ * @title CREDIT
+ * @notice ERC20
+ * @notice anybody can mint
+ * @notice 1 CREDIT = 1 second
+ */
+
 contract CREDIT is ERC20 {
-    /*////////////////////////////////////////////////////////////
-                            CONSTRUCTOR
-    ////////////////////////////////////////////////////////////*/
+    uint256 private lastMint;
 
     constructor() ERC20("Credit", "CREDIT") {
-        _mint(msg.sender, 1000000000 * 10**decimals);
+        lastMint = block.timestamp;
     }
 
-    function burn(uint256 amount) external {
-        _burn(msg.sender, amount);
+    function mint() external {
+        _mint(msg.sender, mintReward());
+        lastMint = block.timestamp;
+    }
+
+    function mintReward() public view returns (uint256) {
+        return block.timestamp - lastMint;
     }
 }

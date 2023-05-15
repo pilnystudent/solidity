@@ -4,16 +4,14 @@ pragma solidity ^0.8.17;
 import {ERC20} from "./token/ERC20.sol";
 import {IWETH} from "./interface/IWETH.sol";
 
+/*
+ * @title WETH
+ * @notice ERC20
+ * @notice WETH replica
+ */
+
 contract WETH is ERC20, IWETH {
-    /*////////////////////////////////////////////////////////////
-                            CONSTRUCTOR
-    ////////////////////////////////////////////////////////////*/
-
     constructor() ERC20("Wrapped Ethereum", "WETH") {}
-
-    /*////////////////////////////////////////////////////////////
-                            LOGIC PUBLIC
-    ////////////////////////////////////////////////////////////*/
 
     function deposit() external payable {
         _mint(msg.sender, msg.value);

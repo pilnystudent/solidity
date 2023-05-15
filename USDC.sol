@@ -5,22 +5,19 @@ import {ERC20} from "./token/ERC20.sol";
 import {Ownable} from "./access/Ownable.sol";
 import {IUSDC} from "./interface/IUSDC.sol";
 
-contract USDC is ERC20, Ownable, IUSDC {
-    /*////////////////////////////////////////////////////////////
-                            STORAGE
-    ////////////////////////////////////////////////////////////*/
+/*
+ * @title USDC
+ * @notice ERC20
+ * @notice USDC replica
+ * @notice Owner can set minter limit
+ * @notice Minter can mint up to limit
+ * @notice Minter can burn up to his minted amount
+ */
 
+contract USDC is ERC20, Ownable, IUSDC {
     mapping(address => Balance) public mintBalance;
 
-    /*////////////////////////////////////////////////////////////
-                            CONSTRUCTOR
-    ////////////////////////////////////////////////////////////*/
-
     constructor() ERC20("USD Coin", "USDC") {}
-
-    /*////////////////////////////////////////////////////////////
-                            LOGIC PUBLIC
-    ////////////////////////////////////////////////////////////*/
 
     function updateMinter(address minter, uint256 limit) external onlyOwner {
         mintBalance[minter].limit = limit;

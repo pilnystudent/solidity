@@ -4,10 +4,15 @@ pragma solidity ^0.8.17;
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {IERC20Metadata} from "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol";
 
+/*
+ * @title ERC20
+ * @notice Gas Efficient Version ERC20
+ */
+
 abstract contract ERC20 is IERC20, IERC20Metadata {
-    /*////////////////////////////////////////////////////////////
+    /*************************************************************
                             STORAGE
-    ////////////////////////////////////////////////////////////*/
+    *************************************************************/
 
     string public name;
     string public symbol;
@@ -16,9 +21,9 @@ abstract contract ERC20 is IERC20, IERC20Metadata {
     mapping(address => uint256) public balanceOf;
     mapping(address => mapping(address => uint256)) public allowance;
 
-    /*////////////////////////////////////////////////////////////
+    /*************************************************************
                             CONSTRUCTOR
-    ////////////////////////////////////////////////////////////*/
+    *************************************************************/
 
     constructor(string memory _name, string memory _symbol) {
         name = _name;
@@ -26,9 +31,9 @@ abstract contract ERC20 is IERC20, IERC20Metadata {
         decimals = 18;
     }
 
-    /*////////////////////////////////////////////////////////////
+    /*************************************************************
                             LOGIC INTERNAL
-    ////////////////////////////////////////////////////////////*/
+    *************************************************************/
 
     function _mint(address to, uint256 amount) internal {
         totalSupply += amount;
@@ -46,9 +51,9 @@ abstract contract ERC20 is IERC20, IERC20Metadata {
         emit Transfer(from, address(0), amount);
     }
 
-    /*////////////////////////////////////////////////////////////
+    /*************************************************************
                             LOGIC PUBLIC
-    ////////////////////////////////////////////////////////////*/
+    *************************************************************/
 
     function approve(address spender, uint256 amount) external returns (bool) {
         allowance[msg.sender][spender] = amount;
