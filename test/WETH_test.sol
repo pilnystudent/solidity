@@ -23,8 +23,9 @@ contract testWETH is WETH {
     /// #value: 500
     function checkMintAndTransfer() public payable returns (bool) {
         this.deposit{value: 500}();
-        Assert.equal(this.totalSupply(), 500, "total balance is not correct");
+        Assert.equal(this.balanceOf(address(this)), 500, "balance value is not correct");
         this.transfer(acc0, 100);
-        return Assert.equal(this.balanceOf(acc0), 100, "transfered value is not correct");
+        Assert.equal(this.balanceOf(acc0), 100, "transferred value is not correct");
+        return Assert.equal(this.totalSupply(), 500, "total supply value is not correct");
     }
 }

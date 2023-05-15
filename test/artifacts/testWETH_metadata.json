@@ -329,7 +329,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"tests/WETH_test.sol": "testWETH"
+			"test/WETH_test.sol": "testWETH"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -360,11 +360,11 @@
 			]
 		},
 		"WETH.sol": {
-			"keccak256": "0xc7c6d1063ac513a17c462dbb5d987eadf4dbfdb127500b7ae0085bd820176acb",
+			"keccak256": "0x84f8c45490c49006a8c99f3d53518375590a9ffe026513f89e76e37aba5c23c8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0dd23882556ea42fce9a991098d16846578a09134a04f5700b8e291d6adfb946",
-				"dweb:/ipfs/QmXdYKixKMTTXxrWG1AgpyT36Z9Hi1qu3khEf9FxjNLyN3"
+				"bzz-raw://c2b21bb9402d02399131732d8b755726f6a718436c37f33669b735ded1fdd9f3",
+				"dweb:/ipfs/QmdDCQJ1LnsrVoNVYvDxLJc8vKXtwEj25ZPScxVTnd1mCa"
 			]
 		},
 		"interface/IWETH.sol": {
@@ -391,12 +391,12 @@
 				"dweb:/ipfs/QmdkW1tT5iadBvaHMCoskhDGZKnfdg8o1D9CcoQYtdJet7"
 			]
 		},
-		"tests/WETH_test.sol": {
-			"keccak256": "0x77366b20f9869ff59ef52a91e8e8b5ba4f538f9bbe8723f8cc325f482d92084c",
+		"test/WETH_test.sol": {
+			"keccak256": "0x4597913e80cc45d9750c7d994ac1c843d739027c8f119175c9df14bf7160c595",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://4bf6ecdf0d74e5d698287f4f0a298905f991546a1ca079a3289b9239fe5bec09",
-				"dweb:/ipfs/QmXmFkXAB4aHshDvaaLYqR4E1XXU2i6QU9pnxtV7cwTb2S"
+				"bzz-raw://a77061c65eeceb08f0278da000e551ffad5aaa9a4b19bfc690dac22601602eda",
+				"dweb:/ipfs/QmQgJ8wA6CGidP76c3p8v5cuhYuhjZCmZR6xRqQPr6CNrJ"
 			]
 		},
 		"token/ERC20.sol": {
