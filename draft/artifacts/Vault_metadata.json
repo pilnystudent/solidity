@@ -8,36 +8,6 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "_token",
-						"type": "address"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "balanceOf",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
 						"internalType": "uint256",
 						"name": "amount",
 						"type": "uint256"
@@ -46,32 +16,6 @@
 				"name": "deposit",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "token",
-				"outputs": [
-					{
-						"internalType": "contract IERC20",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "totalSupply",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -101,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"dev/Vault.sol": "Vault"
+			"draft/Vault.sol": "Vault"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -123,12 +67,12 @@
 				"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
 			]
 		},
-		"dev/Vault.sol": {
-			"keccak256": "0x4a85da1ff68ccd8b59d400fbfbe9612be9955bed1e4e579150079f90787c4e69",
+		"draft/Vault.sol": {
+			"keccak256": "0xbe15dc1b4ff7a7074edf272bcc9ce6a0ce2b29409e437fd5f9ae176d73bca1d5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3b59d48c2d36696a84d053dc1d2b76abe40c6035f9f49308856f691fa2c4dee4",
-				"dweb:/ipfs/QmNrmpLf7WSY22TLH869FpN8sbuKTK8KnqnaFf2q2DgNnR"
+				"bzz-raw://9f4474ad56fdf1ab56eb298418e1d0a50dcc2b1e5aa0ce0ff943200a213ac1ff",
+				"dweb:/ipfs/QmbcbX99HsNwbYVfzsdmc9KVqSd3dPeDyPTNt7a9EK3vnM"
 			]
 		}
 	},

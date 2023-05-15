@@ -81,6 +81,19 @@
 				"type": "event"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "UpdateOwner",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -115,6 +128,29 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "depositReward",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -161,6 +197,26 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -174,6 +230,30 @@
 						"internalType": "address",
 						"name": "owner",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "rewardBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -289,6 +369,42 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "updateOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawReward",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -312,11 +428,6 @@
 					"details": "Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas."
 				}
 			},
-			"stateVariables": {
-				"isApprovedForAll": {
-					"details": "Returns if the `operator` is allowed to manage all of the assets of `owner`. See {setApprovalForAll}"
-				}
-			},
 			"version": 1
 		},
 		"userdoc": {
@@ -327,7 +438,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"draft/ERC721.sol": "ERC721"
+			"TNFT.sol": "TNFT"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -357,6 +468,14 @@
 				"dweb:/ipfs/QmS3tu5EST14obbRvPRTm4h8Etfjn3vSfsW3CnbNd4ho8W"
 			]
 		},
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+				"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+			]
+		},
 		"@openzeppelin/contracts/token/ERC721/IERC721.sol": {
 			"keccak256": "0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68",
 			"license": "MIT",
@@ -379,6 +498,22 @@
 			"urls": [
 				"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
 				"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+			]
+		},
+		"TNFT.sol": {
+			"keccak256": "0x2d7882555757bdfc36a2efad5123d2c152da793f621508f96341d6d3bee8a22a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7bf0283d49207f36962cdda0e4656a51b290a206fcbb003027522e101976af95",
+				"dweb:/ipfs/QmWKvB3kKRXxW1ToUQm5nnD98JH2wLvJ931dmh2KaTCR19"
+			]
+		},
+		"access/Ownable.sol": {
+			"keccak256": "0xec01ffcca466fcfbd0bd8d1a9802801672c941a2817625cf97b1453145e2728c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b55afe0ff6b156f7e62d6eb2d1b7cefb7089a80e977bffab4ecf9677d15b02dd",
+				"dweb:/ipfs/QmXeYUcx13JceuT3ob41ocjoizro5cGxstrhUTyqe4K7Ea"
 			]
 		},
 		"draft/ERC721.sol": {
