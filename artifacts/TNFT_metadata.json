@@ -239,16 +239,16 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "id",
+						"name": "",
 						"type": "uint256"
 					},
 					{
 						"internalType": "address",
-						"name": "token",
+						"name": "",
 						"type": "address"
 					}
 				],
-				"name": "rewardBalance",
+				"name": "reward",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -501,11 +501,11 @@
 			]
 		},
 		"TNFT.sol": {
-			"keccak256": "0x2d7882555757bdfc36a2efad5123d2c152da793f621508f96341d6d3bee8a22a",
+			"keccak256": "0x3346fc4827ca6a2abfa6bf463e5baf54e90aba3de180c0e64b4097909de8acd7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7bf0283d49207f36962cdda0e4656a51b290a206fcbb003027522e101976af95",
-				"dweb:/ipfs/QmWKvB3kKRXxW1ToUQm5nnD98JH2wLvJ931dmh2KaTCR19"
+				"bzz-raw://0487244febbe2df7a328c65f2e54f9c585381b4abd2492f2b83a093d20aa5d8a",
+				"dweb:/ipfs/QmQUUWHqBqoZUiXeAstRL3ggAR19yPkAHniFKZu1TNcqTu"
 			]
 		},
 		"access/Ownable.sol": {
