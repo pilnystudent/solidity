@@ -1,0 +1,231 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "contract IERC20",
+						"name": "selling",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "sellingAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "contract IERC20",
+						"name": "buying",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "buyingAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "Add",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "buyer",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "contract IERC20",
+						"name": "selling",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "sellingAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "contract IERC20",
+						"name": "buying",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "buyingAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "Exchange",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "selling",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sellingAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "contract IERC20",
+						"name": "buying",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "buyingAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "add",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "exchange",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "offers",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IERC20",
+						"name": "selling",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sellingAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "contract IERC20",
+						"name": "buying",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "buyingAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "active",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"dev/SimpleSwap.sol": "SimpleSwap"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+				"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+			]
+		},
+		"dev/SimpleSwap.sol": {
+			"keccak256": "0x608ec04adc660a2a9269b0f08ffa171127edd1cc1fb70f0aa034a1cd3d5f4735",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d607c31077663ee981f8228131732abd254344c28c17d0bcbc68bd0e438fc31d",
+				"dweb:/ipfs/QmRjMespm6SQVVFJELQwdH9yuQ4gjaJzsZLfiuV2fBNbQ4"
+			]
+		}
+	},
+	"version": 1
+}
