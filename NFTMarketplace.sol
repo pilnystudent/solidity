@@ -2,6 +2,7 @@
 pragma solidity ^0.8.17;
 
 import {IERC721} from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import {Ownable} from "./access/Ownable.sol";
 
 struct Ask {
     address owner;
@@ -11,7 +12,7 @@ struct Ask {
     bool active;
 }
 
-contract NFTMarketplace {
+contract NFTMarketplace is Ownable {
     Ask[] public ask;
 
     function createAsk(
@@ -35,5 +36,9 @@ contract NFTMarketplace {
         require(ask[askId].active == true, "active");
         ask[askId].active = false;
         ask[askId].nft.transferFrom(address(this), msg.sender, ask[askId].nftId);
+    }
+
+    function withdraw() external onlyOwner {
+        payable(msg.sender).transfer(address(this).balance);
     }
 }
