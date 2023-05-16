@@ -4,7 +4,96 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "askId",
+						"type": "uint256"
+					}
+				],
+				"name": "acceptAsk",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "ask",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IERC721",
+						"name": "nft",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nftId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "active",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "askId",
+						"type": "uint256"
+					}
+				],
+				"name": "cancelAsk",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IERC721",
+						"name": "nft",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nftId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"name": "createAsk",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -49,11 +138,11 @@
 			]
 		},
 		"NFTMarketplace.sol": {
-			"keccak256": "0x28f04814fe97df36f46ac16ddefe8c39d26e0d878cc064bff1846e93827d969f",
+			"keccak256": "0x261b2ee97f15f8646d45e39e939b39a6eee4ee8d036e25c7302bff967a67931e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ae506b5a8eb1a55a999ea679e27b851e61731182fa9f61091325f674670a31fc",
-				"dweb:/ipfs/QmRhwzgiy8zuAMWWXKtSZEQkUeTY5dETd6omResZx11hkB"
+				"bzz-raw://ff58406fd882994d7dbeb5d64f80684674c34826a3fec8fe0b1b1701f73aad5e",
+				"dweb:/ipfs/QmYo99ZiWG3BJ2Z92SDdcAYoQehCPLHYR7W3oVK1xvNc2U"
 			]
 		}
 	},
