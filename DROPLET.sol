@@ -9,10 +9,10 @@ import {ERC20} from "./token/ERC20.sol";
  * 1 CREDIT = 1 second
  */
 
-contract CREDIT is ERC20 {
+contract DROPLET is ERC20 {
     uint256 private lastMint;
 
-    constructor() ERC20("Credit", "CREDIT") {
+    constructor() ERC20("Droplet", "DROPLET") {
         lastMint = block.timestamp;
     }
 
@@ -22,6 +22,6 @@ contract CREDIT is ERC20 {
     }
 
     function mintReward() public view returns (uint256) {
-        return block.timestamp - lastMint;
+        return (block.timestamp - lastMint) * 10**decimals;
     }
 }
